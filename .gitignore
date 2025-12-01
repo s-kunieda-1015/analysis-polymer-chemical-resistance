@@ -1,0 +1,49 @@
+# Jupyter Notebooks (generated from .py scripts)
+*.ipynb
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data files (download from Zenodo)
+data/
+
+# Output files (generated during execution)
+output/**/*.csv
+output/**/*.xlsx
+output/**/*.pkl
+output/**/*.jpg
+output/**/*.png
+output/**/*.svg
+output/**/*.pdf
+
+# Keep directory structure
+!output/.gitkeep
+!output/*/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+*.log
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+

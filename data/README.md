@@ -28,7 +28,13 @@ Note: The HSP values themselves are not used in this study.
 
 ## Data Availability
 
-These datasets are available from Zenodo (DOI to be added upon publication).
+These datasets are available from Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17775728.svg)](https://doi.org/10.5281/zenodo.17775728)
+
+**DOI**: [10.5281/zenodo.17775728](https://doi.org/10.5281/zenodo.17775728)
+
+> **Note**: The dataset is currently restricted. Please request access through Zenodo.
 
 ## Note
 

@@ -44,7 +44,9 @@ analysis-polymer-chemical-resistance/
 
 The datasets required for this analysis are available on Zenodo:
 
-**Zenodo DOI**: [DOI will be added upon data publication]
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17775728.svg)](https://doi.org/10.5281/zenodo.17775728)
+
+**Zenodo DOI**: [10.5281/zenodo.17775728](https://doi.org/10.5281/zenodo.17775728)
 
 Download the following files and place them in the `data/` directory:
 

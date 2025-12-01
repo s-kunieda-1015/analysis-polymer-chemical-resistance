@@ -504,9 +504,6 @@ plotting.generate_supplementary_s2_cluster_heatmaps(
 )
 plt.show()
 
-df_solvent_rename = df_sorted.drop_duplicates(subset="solvent")[["solvent","smiles_solvent"]]
-df_solvent_rename.to_excel(os.path.join(OUTPUT_DIR, "solvent_rename.xlsx"))
-
 #  ## 4. Dataset Splitting
 
 #  ### 4.1 Test Set Splitting
@@ -1766,24 +1763,6 @@ def plot_chi_hist_by_binary(df, symbol, chi_col="chi", binary_col="resistance_pr
     plt.tight_layout()
     plt.close()
 
-all_chi_dir = os.path.join(REPORT_DIR_MAIN, "all_chi")
-os.makedirs(all_chi_dir, exist_ok=True)
-
-for symbol, df in df_dict.items():
-    final_symbol = plotting.get_final_symbol(symbol, symbol_order)
-    display_symbol = final_symbol.replace("solv", "solvent", 1) if final_symbol.startswith("solv") else final_symbol
-    save_file = f"chi_hist_{final_symbol}.svg"
-    save_path = os.path.join(all_chi_dir, save_file)
-    plot_chi_hist_by_binary(
-        df,
-        symbol=symbol,
-        chi_col="chi",
-        binary_col="resistance_pred_binary",
-        xlim=None,  # Auto-adjust based on each symbol's data
-        save_path=save_path,
-        font_size=18
-    )
-
 # SUPPLEMENTARY FIGURE S6: Chi Parameter Histogram by Polymer
 fig_s6_group1, fig_s6_group2 = plotting.generate_supplementary_s6_chi_histograms(
     df_dict=df_dict,
@@ -1977,29 +1956,6 @@ plot_chi_hist_from_features(
     save_path = save_filepath,
     font_size = 20
 )
-
-# Plot Chi Parameter for All Experimental Resins and Solvents
-features_list = list(all_features_combinations[feature_No])
-all_chi_COSMO_dir = os.path.join(REPORT_DIR_MAIN, "all_chi_COSMO")
-os.makedirs(all_chi_COSMO_dir, exist_ok=True)
-unique_symbols = valid_info_cluster["symbol"].unique()
-for symbol in unique_symbols:
-    idx = valid_info_cluster[valid_info_cluster["symbol"] == symbol].index
-    df_features_subset = valid_data_cluster.loc[idx].copy()
-    df_info_subset = valid_info_cluster.loc[idx].copy()
-    save_filepath = os.path.join(all_chi_COSMO_dir, f"fig5_chi_hist_exp_{symbol}.svg")
-    plot_chi_hist_from_features(
-        df_features = df_features_subset,
-        df_info = df_info_subset,
-        model = gbdt_model,
-        all_features = features_list,
-        exclude_cols = ['n_atom_radonpy_polymer', 'mol_weight_radonpy_polymer'],
-        chi_col = "chi",
-        binary_col = "resistance_binary",
-        xlim = (-3, 7),
-        save_path = save_filepath,
-        font_size = 20
-    )
 
 # Analysis of Experimental Data and Chi Parameter
 features = list(all_features_combinations[feature_No])

@@ -69,7 +69,6 @@ os.environ['JOBLIB_VERBOSITY'] = '0'"""))
 import os
 import sys
 import json
-import csv
 import re
 import math
 from pathlib import Path
@@ -126,7 +125,19 @@ from rdkit.Chem import Draw"""))
 
     cells.append(new_markdown_cell("""### 1.5 Local Utility Imports"""))
 
-    cells.append(new_code_cell("""from utils.io import save_as_csv, save_as_csv_with_head
+    cells.append(new_code_cell("""# Add parent directory to path for utils imports (when running from src/)
+import sys
+from pathlib import Path
+
+# For Jupyter notebooks running in src/ directory
+_notebook_dir = Path('.').resolve()
+if _notebook_dir.name == 'src':
+    _repo_root = _notebook_dir.parent
+else:
+    _repo_root = _notebook_dir
+sys.path.insert(0, str(_repo_root))
+
+from utils.io import save_as_csv, save_as_csv_with_head
 from utils.visualization import init_visualization
 
 # Import utility modules
@@ -247,8 +258,7 @@ df_solv_cluster['cluster_labels'] = df_solv_cluster['cluster_labels'].astype(int
 average_df = df_solv_cluster.groupby('cluster_labels')[['resistance_0_(%)', 'resistance_1_(%)']].mean()
 average_df.reset_index(inplace=True)
 
-# Load df_rename_solvent for later use
-df_rename_solvent = pd.read_excel("rename_solvent/solvent_rename_after.xlsx", index_col=0)"""))
+# Note: Solvent renaming data is now included in the metadata JSON loaded by data_preprocessing"""))
 
     cells.append(new_markdown_cell("""### 2.3 Load Additional Datasets"""))
 
@@ -497,10 +507,7 @@ plotting.generate_supplementary_s2_cluster_heatmaps(
     solvent_name_dict=solvent_name_dict,
     save_dir=REPORT_DIR_SUB
 )
-plt.show()
-
-df_solvent_rename = df_sorted.drop_duplicates(subset="solvent")[["solvent","smiles_solvent"]]
-df_solvent_rename.to_excel("solvent_rename.xlsx")"""))
+plt.show()"""))
 
     # =========================================================================
     # SECTION 6: Dataset Splitting and Preparation
@@ -732,8 +739,8 @@ for metric in metric_names:
     cells.append(new_markdown_cell("""### 6.1 Supplementary Figure S3: ROC Curves and Confusion Matrices"""))
 
     cells.append(new_code_cell("""# SUPPLEMENTARY FIGURE S3: ROC Curves and Confusion Matrices
-script_dir = Path(__file__).parent if '__file__' in dir() else Path('.')
-logocv_dir = script_dir / "LOGOCV"
+# Use LOGOCV_DIR from config
+logocv_dir = LOGOCV_DIR
 plot_data_dir = logocv_dir / "plot_data"
 
 # Convert symbol_order to list
@@ -752,8 +759,8 @@ plt.show()"""))
 
     cells.append(new_code_cell("""# Read LOGOCV results
 metric_names = ["micro_f1", "macro_f1", "auc", "accuracy", "fpr", "fnr"]
-script_dir = Path(__file__).parent if '__file__' in dir() else Path('.')
-logocv_dir = script_dir / "LOGOCV"
+# Use LOGOCV_DIR from config
+logocv_dir = LOGOCV_DIR
 result_files = {}
 for metric in metric_names:
     result_file = logocv_dir / f"result_{metric}.csv"
@@ -1190,7 +1197,7 @@ if _POLYMER_MPK_LOADED:
     df_acetone_vPolymer = _df_polymer_mpk.copy()
     print("✓ Using preprocessed polymer_mpk_dataset")
 else:
-    df_acetone_vPolymer = pd.read_csv("../data/vPolymer_vSolvent/MPK_vPolymer_40971_data.csv", index_col=0)
+    df_acetone_vPolymer = pd.read_csv(DATA_DIR / "vPolymer_vSolvent" / "MPK_vPolymer_40971_data.csv", index_col=0)
 
 rename_cols = {col: col.replace("_resin", "_polymer") for col in df_acetone_vPolymer.columns if "_resin" in col}
 df_acetone_vPolymer = df_acetone_vPolymer.rename(columns=rename_cols)
@@ -1241,7 +1248,7 @@ chi_explanatory_cols = [col for col in chi_explanatory_cols if col not in exclud
 if _PE_SOLVENT_LOADED:
     df_PE_vSolv = _df_pe_solvent.copy()
 else:
-    df_PE_vSolv = pd.read_csv("../data/vPolymer_vSolvent/PE_vsolv_9828_data.csv", index_col=0)
+    df_PE_vSolv = pd.read_csv(DATA_DIR / "vPolymer_vSolvent" / "PE_vsolv_9828_data.csv", index_col=0)
 
 rename_cols = {col: col.replace("_resin", "_polymer") for col in df_PE_vSolv.columns if "_resin" in col}
 df_PE_vSolv = df_PE_vSolv.rename(columns=rename_cols)

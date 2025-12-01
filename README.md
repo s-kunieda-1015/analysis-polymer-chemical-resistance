@@ -52,9 +52,9 @@ Download the following files and place them in the `data/` directory:
 
 | File | Description | Size |
 |------|-------------|------|
-| `chemical_resistance_dataset.csv` | Main experimental dataset (2231 records) | ~20 MB |
-| `polymer_mpk_dataset.csv` | Virtual polymer dataset (40971 records) | ~285 MB |
-| `pe_solvent_dataset.csv` | PE solvent dataset (9828 records) | ~65 MB |
+| `chemical_resistance_dataset.csv` | Main experimental dataset (2231 records) | 21.02 MB |
+| `polymer_mpk_dataset.csv` | Virtual polymer dataset (40971 records) | 298.99 MB |
+| `pe_solvent_dataset.csv` | PE solvent dataset (9828 records) | 68.12 MB |
 
 > **Note**: `chemical_resistance_metadata.json` (metadata including name mappings) is already included in this repository.
 

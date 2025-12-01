@@ -16,6 +16,16 @@ The following files should be placed in this directory:
 
 The `dataset_view/` subdirectory contains formatted versions for easier viewing.
 
+## Data Sources
+
+### polymer_mpk_dataset.csv
+This dataset is based on the [PolyOmics](https://huggingface.co/datasets/yhayashi1986/PolyOmics) dataset.
+See the related paper: [arXiv:2511.11626](https://arxiv.org/abs/2511.11626)
+
+### pe_solvent_dataset.csv
+The solvent SMILES data is derived from [HSPiP (Hansen Solubility Parameters in Practice)](https://www.pirika.com/wp/chemistry-at-pirika-com/hsp/how2buy).
+Note: The HSP values themselves are not used in this study.
+
 ## Data Availability
 
 These datasets are available from Zenodo (DOI to be added upon publication).

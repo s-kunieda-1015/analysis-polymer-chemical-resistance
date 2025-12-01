@@ -2,13 +2,17 @@
 
 This directory contains datasets required for the chemical resistance prediction analysis.
 
-## Data Files (Not tracked by Git)
+## Data Files
 
-The following files should be placed in this directory:
+### Tracked by Git
+
+- `chemical_resistance_metadata.json` - Metadata including polymer/solvent naming dictionaries
+
+### Not tracked by Git (download from Zenodo)
+
+The following files should be downloaded and placed in this directory:
 
 - `chemical_resistance_dataset.csv` - Main chemical resistance experimental data
-- `chemical_resistance_dataset.xlsx` - Excel version of the main dataset
-- `chemical_resistance_metadata.json` - Metadata including polymer/solvent naming dictionaries
 - `pe_solvent_dataset.csv` - Polyethylene virtual solvent dataset
 - `polymer_mpk_dataset.csv` - Virtual polymer dataset with MPK solvent
 
@@ -38,6 +42,6 @@ These datasets are available from Zenodo:
 
 ## Note
 
-These files are excluded from version control due to their size and to ensure data integrity.
-Please download the datasets from the official source before running the analysis.
+Large data files are excluded from version control due to their size.
+Please download the datasets from Zenodo before running the analysis.
 

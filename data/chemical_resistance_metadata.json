@@ -1,0 +1,2461 @@
+{
+  "info_columns": [
+    "solvent",
+    "symbol",
+    "smiles_solvent",
+    "smiles_polymer",
+    "name_polymer",
+    "repeating_unit",
+    "resistance_binary",
+    "crystalinity_binary",
+    "n_mol_radonpy_polymer",
+    "qm_polarizability_xy_monomer1_radonpy_polymer",
+    "linear_expansion_radonpy_polymer",
+    "qm_dipole_x_monomer1_radonpy_polymer",
+    "tg_cooling_rate_radonpy_polymer",
+    "Cp_radonpy_polymer",
+    "tg_max_temp_radonpy_polymer",
+    "vdw_volume_monomer1_radonpy_polymer",
+    "tg_interval_temp_radonpy_polymer",
+    "qm_polarizability_xz_monomer1_radonpy_polymer",
+    "n_atom_radonpy_polymer",
+    "tg_init_density_radonpy_polymer",
+    "qm_dipole_y_monomer1_radonpy_polymer",
+    "density_radonpy_polymer",
+    "isentropic_bulk_modulus_radonpy_polymer",
+    "r2_radonpy_polymer",
+    "tg_next_temp_radonpy_polymer",
+    "static_dielectric_const_radonpy_polymer",
+    "qm_lumo_monomer1_radonpy_polymer",
+    "Mn_radonpy_polymer",
+    "thermal_conductivity_radonpy_polymer",
+    "thermal_diffusivity_radonpy_polymer",
+    "TC_pair_radonpy_polymer",
+    "dielectric_const_dc_radonpy_polymer",
+    "nematic_order_parameter_radonpy_polymer",
+    "Mw_radonpy_polymer",
+    "qm_polarizability_xx_monomer1_radonpy_polymer",
+    "tg_radonpy_polymer",
+    "volume_expansion_radonpy_polymer",
+    "mol_weight_monomer1_radonpy_polymer",
+    "TC_bond_radonpy_polymer",
+    "TC_dihed_radonpy_polymer",
+    "qm_polarizability_monomer1_radonpy_polymer",
+    "self-diffusion_radonpy_polymer",
+    "refractive_index_radonpy_polymer",
+    "TC_fix_radonpy_polymer",
+    "n_atom_mean_radonpy_polymer",
+    "qm_dipole_z_monomer1_radonpy_polymer",
+    "qm_polarizability_zz_monomer1_radonpy_polymer",
+    "qm_homo_monomer1_radonpy_polymer",
+    "mol_weight_radonpy_polymer",
+    "qm_total_energy_monomer1_radonpy_polymer",
+    "n_atom_var_radonpy_polymer",
+    "isentropic_compressibility_radonpy_polymer",
+    "Rg_radonpy_polymer",
+    "Cv_radonpy_polymer",
+    "tg_min_temp_radonpy_polymer",
+    "compressibility_radonpy_polymer",
+    "TC_kspace_radonpy_polymer",
+    "qm_polarizability_yz_monomer1_radonpy_polymer",
+    "DP_radonpy_polymer",
+    "TC_improper_radonpy_polymer",
+    "qm_polarizability_yy_monomer1_radonpy_polymer",
+    "TC_pe_radonpy_polymer",
+    "TC_ke_radonpy_polymer",
+    "bulk_modulus_radonpy_polymer",
+    "tg_rmse_radonpy_polymer",
+    "TC_angle_radonpy_polymer",
+    "Scaled_Rg_radonpy_polymer",
+    "cluster_labels"
+  ],
+  "shared_columns": [
+    "crystalinity_binary",
+    "n_mol_radonpy_polymer",
+    "qm_polarizability_xy_monomer1_radonpy_polymer",
+    "linear_expansion_radonpy_polymer",
+    "qm_dipole_x_monomer1_radonpy_polymer",
+    "tg_cooling_rate_radonpy_polymer",
+    "Cp_radonpy_polymer",
+    "tg_max_temp_radonpy_polymer",
+    "vdw_volume_monomer1_radonpy_polymer",
+    "tg_interval_temp_radonpy_polymer",
+    "qm_polarizability_xz_monomer1_radonpy_polymer",
+    "n_atom_radonpy_polymer",
+    "tg_init_density_radonpy_polymer",
+    "qm_dipole_y_monomer1_radonpy_polymer",
+    "density_radonpy_polymer",
+    "isentropic_bulk_modulus_radonpy_polymer",
+    "r2_radonpy_polymer",
+    "tg_next_temp_radonpy_polymer",
+    "static_dielectric_const_radonpy_polymer",
+    "qm_lumo_monomer1_radonpy_polymer",
+    "Mn_radonpy_polymer",
+    "thermal_conductivity_radonpy_polymer",
+    "thermal_diffusivity_radonpy_polymer",
+    "TC_pair_radonpy_polymer",
+    "dielectric_const_dc_radonpy_polymer",
+    "nematic_order_parameter_radonpy_polymer",
+    "Mw_radonpy_polymer",
+    "qm_polarizability_xx_monomer1_radonpy_polymer",
+    "tg_radonpy_polymer",
+    "volume_expansion_radonpy_polymer",
+    "mol_weight_monomer1_radonpy_polymer",
+    "TC_bond_radonpy_polymer",
+    "TC_dihed_radonpy_polymer",
+    "qm_polarizability_monomer1_radonpy_polymer",
+    "self-diffusion_radonpy_polymer",
+    "refractive_index_radonpy_polymer",
+    "TC_fix_radonpy_polymer",
+    "n_atom_mean_radonpy_polymer",
+    "qm_dipole_z_monomer1_radonpy_polymer",
+    "qm_polarizability_zz_monomer1_radonpy_polymer",
+    "qm_homo_monomer1_radonpy_polymer",
+    "mol_weight_radonpy_polymer",
+    "qm_total_energy_monomer1_radonpy_polymer",
+    "n_atom_var_radonpy_polymer",
+    "isentropic_compressibility_radonpy_polymer",
+    "Rg_radonpy_polymer",
+    "Cv_radonpy_polymer",
+    "tg_min_temp_radonpy_polymer",
+    "compressibility_radonpy_polymer",
+    "TC_kspace_radonpy_polymer",
+    "qm_polarizability_yz_monomer1_radonpy_polymer",
+    "DP_radonpy_polymer",
+    "TC_improper_radonpy_polymer",
+    "qm_polarizability_yy_monomer1_radonpy_polymer",
+    "TC_pe_radonpy_polymer",
+    "TC_ke_radonpy_polymer",
+    "bulk_modulus_radonpy_polymer",
+    "tg_rmse_radonpy_polymer",
+    "TC_angle_radonpy_polymer",
+    "Scaled_Rg_radonpy_polymer"
+  ],
+  "feature_columns": {
+    "FF_solvent_cols": [
+      "FF_mass_H_solvent",
+      "FF_mass_C_solvent",
+      "FF_mass_N_solvent",
+      "FF_mass_O_solvent",
+      "FF_mass_F_solvent",
+      "FF_mass_P_solvent",
+      "FF_mass_S_solvent",
+      "FF_mass_Cl_solvent",
+      "FF_mass_Br_solvent",
+      "FF_charge_2_solvent",
+      "FF_charge_3_solvent",
+      "FF_charge_4_solvent",
+      "FF_charge_5_solvent",
+      "FF_charge_6_solvent",
+      "FF_charge_7_solvent",
+      "FF_charge_8_solvent",
+      "FF_charge_9_solvent",
+      "FF_charge_10_solvent",
+      "FF_charge_11_solvent",
+      "FF_charge_12_solvent",
+      "FF_charge_13_solvent",
+      "FF_charge_14_solvent",
+      "FF_charge_15_solvent",
+      "FF_charge_16_solvent",
+      "FF_charge_17_solvent",
+      "FF_charge_18_solvent",
+      "FF_epsilon_0_solvent",
+      "FF_epsilon_1_solvent",
+      "FF_epsilon_2_solvent",
+      "FF_epsilon_3_solvent",
+      "FF_epsilon_4_solvent",
+      "FF_epsilon_5_solvent",
+      "FF_epsilon_6_solvent",
+      "FF_epsilon_7_solvent",
+      "FF_epsilon_8_solvent",
+      "FF_epsilon_9_solvent",
+      "FF_epsilon_10_solvent",
+      "FF_epsilon_11_solvent",
+      "FF_epsilon_12_solvent",
+      "FF_epsilon_13_solvent",
+      "FF_epsilon_14_solvent",
+      "FF_epsilon_15_solvent",
+      "FF_epsilon_16_solvent",
+      "FF_epsilon_17_solvent",
+      "FF_epsilon_18_solvent",
+      "FF_sigma_0_solvent",
+      "FF_sigma_1_solvent",
+      "FF_sigma_2_solvent",
+      "FF_sigma_3_solvent",
+      "FF_sigma_4_solvent",
+      "FF_sigma_5_solvent",
+      "FF_sigma_6_solvent",
+      "FF_sigma_7_solvent",
+      "FF_sigma_8_solvent",
+      "FF_sigma_9_solvent",
+      "FF_sigma_10_solvent",
+      "FF_sigma_11_solvent",
+      "FF_sigma_12_solvent",
+      "FF_sigma_13_solvent",
+      "FF_sigma_14_solvent",
+      "FF_sigma_15_solvent",
+      "FF_sigma_16_solvent",
+      "FF_sigma_17_solvent",
+      "FF_sigma_18_solvent",
+      "FF_sigma_19_solvent",
+      "FF_k_bond_0_solvent",
+      "FF_k_bond_1_solvent",
+      "FF_k_bond_2_solvent",
+      "FF_k_bond_3_solvent",
+      "FF_k_bond_4_solvent",
+      "FF_k_bond_5_solvent",
+      "FF_k_bond_6_solvent",
+      "FF_k_bond_7_solvent",
+      "FF_k_bond_8_solvent",
+      "FF_k_bond_9_solvent",
+      "FF_k_bond_10_solvent",
+      "FF_k_bond_11_solvent",
+      "FF_k_bond_12_solvent",
+      "FF_k_bond_13_solvent",
+      "FF_k_bond_14_solvent",
+      "FF_k_bond_15_solvent",
+      "FF_k_bond_16_solvent",
+      "FF_k_bond_17_solvent",
+      "FF_k_bond_18_solvent",
+      "FF_k_bond_19_solvent",
+      "FF_r0_0_solvent",
+      "FF_r0_1_solvent",
+      "FF_r0_2_solvent",
+      "FF_r0_3_solvent",
+      "FF_r0_4_solvent",
+      "FF_r0_5_solvent",
+      "FF_r0_6_solvent",
+      "FF_r0_7_solvent",
+      "FF_r0_8_solvent",
+      "FF_r0_9_solvent",
+      "FF_r0_10_solvent",
+      "FF_r0_11_solvent",
+      "FF_r0_12_solvent",
+      "FF_r0_13_solvent",
+      "FF_polar_0_solvent",
+      "FF_polar_1_solvent",
+      "FF_polar_2_solvent",
+      "FF_polar_3_solvent",
+      "FF_polar_4_solvent",
+      "FF_polar_5_solvent",
+      "FF_polar_6_solvent",
+      "FF_polar_7_solvent",
+      "FF_polar_8_solvent",
+      "FF_polar_9_solvent",
+      "FF_polar_10_solvent",
+      "FF_polar_11_solvent",
+      "FF_polar_12_solvent",
+      "FF_k_angle_0_solvent",
+      "FF_k_angle_1_solvent",
+      "FF_k_angle_2_solvent",
+      "FF_k_angle_3_solvent",
+      "FF_k_angle_4_solvent",
+      "FF_k_angle_5_solvent",
+      "FF_k_angle_6_solvent",
+      "FF_k_angle_7_solvent",
+      "FF_k_angle_8_solvent",
+      "FF_k_angle_9_solvent",
+      "FF_k_angle_10_solvent",
+      "FF_k_angle_11_solvent",
+      "FF_k_angle_12_solvent",
+      "FF_k_angle_13_solvent",
+      "FF_k_angle_14_solvent",
+      "FF_k_angle_15_solvent",
+      "FF_k_angle_16_solvent",
+      "FF_k_angle_17_solvent",
+      "FF_theta0_0_solvent",
+      "FF_theta0_1_solvent",
+      "FF_theta0_2_solvent",
+      "FF_theta0_3_solvent",
+      "FF_theta0_4_solvent",
+      "FF_theta0_5_solvent",
+      "FF_theta0_6_solvent",
+      "FF_theta0_7_solvent",
+      "FF_theta0_8_solvent",
+      "FF_theta0_9_solvent",
+      "FF_theta0_10_solvent",
+      "FF_theta0_11_solvent",
+      "FF_theta0_12_solvent",
+      "FF_theta0_13_solvent",
+      "FF_theta0_14_solvent",
+      "FF_theta0_15_solvent",
+      "FF_theta0_16_solvent",
+      "FF_theta0_17_solvent",
+      "FF_theta0_18_solvent",
+      "FF_theta0_19_solvent",
+      "FF_k_dih_0_solvent",
+      "FF_k_dih_1_solvent",
+      "FF_k_dih_2_solvent",
+      "FF_k_dih_3_solvent",
+      "FF_k_dih_4_solvent",
+      "FF_k_dih_5_solvent",
+      "FF_k_dih_6_solvent",
+      "FF_k_dih_7_solvent",
+      "FF_k_dih_8_solvent",
+      "FF_k_dih_9_solvent",
+      "FF_k_dih_10_solvent",
+      "FF_k_dih_11_solvent",
+      "FF_k_dih_12_solvent",
+      "FF_k_dih_13_solvent",
+      "FF_k_dih_14_solvent"
+    ],
+    "FF_polymer_cols": [
+      "FF_mass_H_polymer",
+      "FF_mass_C_polymer",
+      "FF_mass_N_polymer",
+      "FF_mass_O_polymer",
+      "FF_mass_F_polymer",
+      "FF_mass_P_polymer",
+      "FF_mass_S_polymer",
+      "FF_mass_Cl_polymer",
+      "FF_charge_2_polymer",
+      "FF_charge_3_polymer",
+      "FF_charge_4_polymer",
+      "FF_charge_5_polymer",
+      "FF_charge_6_polymer",
+      "FF_charge_7_polymer",
+      "FF_charge_8_polymer",
+      "FF_charge_9_polymer",
+      "FF_charge_10_polymer",
+      "FF_charge_11_polymer",
+      "FF_charge_12_polymer",
+      "FF_charge_13_polymer",
+      "FF_charge_14_polymer",
+      "FF_charge_15_polymer",
+      "FF_charge_16_polymer",
+      "FF_charge_17_polymer",
+      "FF_epsilon_0_polymer",
+      "FF_epsilon_1_polymer",
+      "FF_epsilon_2_polymer",
+      "FF_epsilon_3_polymer",
+      "FF_epsilon_4_polymer",
+      "FF_epsilon_5_polymer",
+      "FF_epsilon_6_polymer",
+      "FF_epsilon_7_polymer",
+      "FF_epsilon_8_polymer",
+      "FF_epsilon_9_polymer",
+      "FF_epsilon_10_polymer",
+      "FF_epsilon_11_polymer",
+      "FF_epsilon_12_polymer",
+      "FF_epsilon_13_polymer",
+      "FF_sigma_11_polymer",
+      "FF_sigma_12_polymer",
+      "FF_sigma_13_polymer",
+      "FF_sigma_14_polymer",
+      "FF_sigma_15_polymer",
+      "FF_sigma_16_polymer",
+      "FF_sigma_17_polymer",
+      "FF_sigma_18_polymer",
+      "FF_sigma_19_polymer",
+      "FF_k_bond_0_polymer",
+      "FF_k_bond_1_polymer",
+      "FF_k_bond_2_polymer",
+      "FF_k_bond_3_polymer",
+      "FF_k_bond_4_polymer",
+      "FF_k_bond_5_polymer",
+      "FF_k_bond_6_polymer",
+      "FF_k_bond_7_polymer",
+      "FF_k_bond_8_polymer",
+      "FF_k_bond_9_polymer",
+      "FF_k_bond_10_polymer",
+      "FF_k_bond_11_polymer",
+      "FF_k_bond_12_polymer",
+      "FF_k_bond_13_polymer",
+      "FF_k_bond_14_polymer",
+      "FF_k_bond_15_polymer",
+      "FF_k_bond_16_polymer",
+      "FF_k_bond_17_polymer",
+      "FF_r0_0_polymer",
+      "FF_r0_1_polymer",
+      "FF_r0_2_polymer",
+      "FF_r0_3_polymer",
+      "FF_r0_4_polymer",
+      "FF_r0_5_polymer",
+      "FF_r0_6_polymer",
+      "FF_r0_7_polymer",
+      "FF_r0_8_polymer",
+      "FF_r0_9_polymer",
+      "FF_r0_10_polymer",
+      "FF_r0_11_polymer",
+      "FF_polar_0_polymer",
+      "FF_polar_1_polymer",
+      "FF_polar_2_polymer",
+      "FF_polar_3_polymer",
+      "FF_polar_4_polymer",
+      "FF_polar_5_polymer",
+      "FF_polar_6_polymer",
+      "FF_polar_7_polymer",
+      "FF_polar_8_polymer",
+      "FF_polar_9_polymer",
+      "FF_polar_10_polymer",
+      "FF_polar_11_polymer",
+      "FF_k_angle_2_polymer",
+      "FF_k_angle_3_polymer",
+      "FF_k_angle_4_polymer",
+      "FF_k_angle_5_polymer",
+      "FF_k_angle_6_polymer",
+      "FF_k_angle_7_polymer",
+      "FF_k_angle_8_polymer",
+      "FF_k_angle_9_polymer",
+      "FF_k_angle_10_polymer",
+      "FF_k_angle_11_polymer",
+      "FF_k_angle_12_polymer",
+      "FF_k_angle_13_polymer",
+      "FF_k_angle_14_polymer",
+      "FF_k_angle_15_polymer",
+      "FF_k_angle_16_polymer",
+      "FF_k_angle_17_polymer",
+      "FF_theta0_5_polymer",
+      "FF_theta0_6_polymer",
+      "FF_theta0_7_polymer",
+      "FF_theta0_8_polymer",
+      "FF_theta0_9_polymer",
+      "FF_theta0_10_polymer",
+      "FF_theta0_11_polymer",
+      "FF_theta0_12_polymer",
+      "FF_theta0_13_polymer",
+      "FF_theta0_14_polymer",
+      "FF_k_dih_0_polymer",
+      "FF_k_dih_1_polymer",
+      "FF_k_dih_2_polymer",
+      "FF_k_dih_3_polymer",
+      "FF_k_dih_4_polymer",
+      "FF_k_dih_5_polymer",
+      "FF_k_dih_6_polymer",
+      "FF_k_dih_7_polymer",
+      "FF_k_dih_8_polymer",
+      "FF_k_dih_9_polymer",
+      "FF_k_dih_10_polymer",
+      "FF_k_dih_11_polymer",
+      "FF_k_dih_12_polymer",
+      "FF_k_dih_13_polymer",
+      "FF_k_dih_14_polymer"
+    ],
+    "RDKit_solvent_cols": [
+      "RDKit_MaxAbsEStateIndex_solvent",
+      "RDKit_MaxEStateIndex_solvent",
+      "RDKit_MinAbsEStateIndex_solvent",
+      "RDKit_MinEStateIndex_solvent",
+      "RDKit_qed_solvent",
+      "RDKit_SPS_solvent",
+      "RDKit_MolWt_solvent",
+      "RDKit_HeavyAtomMolWt_solvent",
+      "RDKit_ExactMolWt_solvent",
+      "RDKit_NumValenceElectrons_solvent",
+      "RDKit_MaxPartialCharge_solvent",
+      "RDKit_MinPartialCharge_solvent",
+      "RDKit_MaxAbsPartialCharge_solvent",
+      "RDKit_MinAbsPartialCharge_solvent",
+      "RDKit_FpDensityMorgan1_solvent",
+      "RDKit_FpDensityMorgan2_solvent",
+      "RDKit_FpDensityMorgan3_solvent",
+      "RDKit_BCUT2D_MWHI_solvent",
+      "RDKit_BCUT2D_MWLOW_solvent",
+      "RDKit_BCUT2D_CHGHI_solvent",
+      "RDKit_BCUT2D_CHGLO_solvent",
+      "RDKit_BCUT2D_LOGPHI_solvent",
+      "RDKit_BCUT2D_LOGPLOW_solvent",
+      "RDKit_BCUT2D_MRHI_solvent",
+      "RDKit_BCUT2D_MRLOW_solvent",
+      "RDKit_AvgIpc_solvent",
+      "RDKit_BalabanJ_solvent",
+      "RDKit_BertzCT_solvent",
+      "RDKit_Chi0_solvent",
+      "RDKit_Chi0n_solvent",
+      "RDKit_Chi0v_solvent",
+      "RDKit_Chi1_solvent",
+      "RDKit_Chi1n_solvent",
+      "RDKit_Chi1v_solvent",
+      "RDKit_Chi2n_solvent",
+      "RDKit_Chi2v_solvent",
+      "RDKit_Chi3n_solvent",
+      "RDKit_Chi3v_solvent",
+      "RDKit_Chi4n_solvent",
+      "RDKit_Chi4v_solvent",
+      "RDKit_HallKierAlpha_solvent",
+      "RDKit_Ipc_solvent",
+      "RDKit_Kappa1_solvent",
+      "RDKit_Kappa2_solvent",
+      "RDKit_Kappa3_solvent",
+      "RDKit_LabuteASA_solvent",
+      "RDKit_PEOE_VSA1_solvent",
+      "RDKit_PEOE_VSA10_solvent",
+      "RDKit_PEOE_VSA11_solvent",
+      "RDKit_PEOE_VSA12_solvent",
+      "RDKit_PEOE_VSA13_solvent",
+      "RDKit_PEOE_VSA14_solvent",
+      "RDKit_PEOE_VSA2_solvent",
+      "RDKit_PEOE_VSA3_solvent",
+      "RDKit_PEOE_VSA4_solvent",
+      "RDKit_PEOE_VSA5_solvent",
+      "RDKit_PEOE_VSA6_solvent",
+      "RDKit_PEOE_VSA7_solvent",
+      "RDKit_PEOE_VSA8_solvent",
+      "RDKit_PEOE_VSA9_solvent",
+      "RDKit_SMR_VSA1_solvent",
+      "RDKit_SMR_VSA10_solvent",
+      "RDKit_SMR_VSA2_solvent",
+      "RDKit_SMR_VSA3_solvent",
+      "RDKit_SMR_VSA4_solvent",
+      "RDKit_SMR_VSA5_solvent",
+      "RDKit_SMR_VSA6_solvent",
+      "RDKit_SMR_VSA7_solvent",
+      "RDKit_SMR_VSA9_solvent",
+      "RDKit_SlogP_VSA1_solvent",
+      "RDKit_SlogP_VSA10_solvent",
+      "RDKit_SlogP_VSA11_solvent",
+      "RDKit_SlogP_VSA12_solvent",
+      "RDKit_SlogP_VSA2_solvent",
+      "RDKit_SlogP_VSA3_solvent",
+      "RDKit_SlogP_VSA4_solvent",
+      "RDKit_SlogP_VSA5_solvent",
+      "RDKit_SlogP_VSA6_solvent",
+      "RDKit_SlogP_VSA7_solvent",
+      "RDKit_SlogP_VSA8_solvent",
+      "RDKit_TPSA_solvent",
+      "RDKit_EState_VSA1_solvent",
+      "RDKit_EState_VSA10_solvent",
+      "RDKit_EState_VSA2_solvent",
+      "RDKit_EState_VSA3_solvent",
+      "RDKit_EState_VSA4_solvent",
+      "RDKit_EState_VSA5_solvent",
+      "RDKit_EState_VSA6_solvent",
+      "RDKit_EState_VSA7_solvent",
+      "RDKit_EState_VSA8_solvent",
+      "RDKit_EState_VSA9_solvent",
+      "RDKit_VSA_EState1_solvent",
+      "RDKit_VSA_EState10_solvent",
+      "RDKit_VSA_EState2_solvent",
+      "RDKit_VSA_EState3_solvent",
+      "RDKit_VSA_EState4_solvent",
+      "RDKit_VSA_EState5_solvent",
+      "RDKit_VSA_EState6_solvent",
+      "RDKit_VSA_EState7_solvent",
+      "RDKit_VSA_EState8_solvent",
+      "RDKit_VSA_EState9_solvent",
+      "RDKit_FractionCSP3_solvent",
+      "RDKit_HeavyAtomCount_solvent",
+      "RDKit_NHOHCount_solvent",
+      "RDKit_NOCount_solvent",
+      "RDKit_NumAliphaticCarbocycles_solvent",
+      "RDKit_NumAliphaticHeterocycles_solvent",
+      "RDKit_NumAliphaticRings_solvent",
+      "RDKit_NumAromaticCarbocycles_solvent",
+      "RDKit_NumAromaticHeterocycles_solvent",
+      "RDKit_NumAromaticRings_solvent",
+      "RDKit_NumHAcceptors_solvent",
+      "RDKit_NumHDonors_solvent",
+      "RDKit_NumHeteroatoms_solvent",
+      "RDKit_NumRotatableBonds_solvent",
+      "RDKit_NumSaturatedCarbocycles_solvent",
+      "RDKit_NumSaturatedHeterocycles_solvent",
+      "RDKit_NumSaturatedRings_solvent",
+      "RDKit_RingCount_solvent",
+      "RDKit_MolLogP_solvent",
+      "RDKit_MolMR_solvent",
+      "RDKit_fr_Al_COO_solvent",
+      "RDKit_fr_Al_OH_solvent",
+      "RDKit_fr_Al_OH_noTert_solvent",
+      "RDKit_fr_ArN_solvent",
+      "RDKit_fr_Ar_COO_solvent",
+      "RDKit_fr_Ar_N_solvent",
+      "RDKit_fr_Ar_NH_solvent",
+      "RDKit_fr_Ar_OH_solvent",
+      "RDKit_fr_COO_solvent",
+      "RDKit_fr_COO2_solvent",
+      "RDKit_fr_C_O_solvent",
+      "RDKit_fr_C_O_noCOO_solvent",
+      "RDKit_fr_C_S_solvent",
+      "RDKit_fr_Imine_solvent",
+      "RDKit_fr_NH0_solvent",
+      "RDKit_fr_NH1_solvent",
+      "RDKit_fr_NH2_solvent",
+      "RDKit_fr_Nhpyrrole_solvent",
+      "RDKit_fr_SH_solvent",
+      "RDKit_fr_aldehyde_solvent",
+      "RDKit_fr_alkyl_halide_solvent",
+      "RDKit_fr_allylic_oxid_solvent",
+      "RDKit_fr_amide_solvent",
+      "RDKit_fr_aniline_solvent",
+      "RDKit_fr_aryl_methyl_solvent",
+      "RDKit_fr_benzene_solvent",
+      "RDKit_fr_bicyclic_solvent",
+      "RDKit_fr_epoxide_solvent",
+      "RDKit_fr_ester_solvent",
+      "RDKit_fr_ether_solvent",
+      "RDKit_fr_furan_solvent",
+      "RDKit_fr_halogen_solvent",
+      "RDKit_fr_hdrzine_solvent",
+      "RDKit_fr_isocyan_solvent",
+      "RDKit_fr_ketone_solvent",
+      "RDKit_fr_ketone_Topliss_solvent",
+      "RDKit_fr_methoxy_solvent",
+      "RDKit_fr_nitrile_solvent",
+      "RDKit_fr_nitro_solvent",
+      "RDKit_fr_nitro_arom_solvent",
+      "RDKit_fr_nitro_arom_nonortho_solvent",
+      "RDKit_fr_para_hydroxylation_solvent",
+      "RDKit_fr_phenol_solvent",
+      "RDKit_fr_phenol_noOrthoHbond_solvent",
+      "RDKit_fr_phos_acid_solvent",
+      "RDKit_fr_phos_ester_solvent",
+      "RDKit_fr_piperdine_solvent",
+      "RDKit_fr_priamide_solvent",
+      "RDKit_fr_pyridine_solvent",
+      "RDKit_fr_term_acetylene_solvent",
+      "RDKit_fr_unbrch_alkane_solvent"
+    ],
+    "RDKit_polymer_cols": [
+      "RDKit_MaxAbsEStateIndex_polymer",
+      "RDKit_MaxEStateIndex_polymer",
+      "RDKit_MinAbsEStateIndex_polymer",
+      "RDKit_MinEStateIndex_polymer",
+      "RDKit_qed_polymer",
+      "RDKit_SPS_polymer",
+      "RDKit_MolWt_polymer",
+      "RDKit_HeavyAtomMolWt_polymer",
+      "RDKit_ExactMolWt_polymer",
+      "RDKit_NumValenceElectrons_polymer",
+      "RDKit_FpDensityMorgan1_polymer",
+      "RDKit_FpDensityMorgan2_polymer",
+      "RDKit_FpDensityMorgan3_polymer",
+      "RDKit_AvgIpc_polymer",
+      "RDKit_BalabanJ_polymer",
+      "RDKit_BertzCT_polymer",
+      "RDKit_Chi0_polymer",
+      "RDKit_Chi0n_polymer",
+      "RDKit_Chi0v_polymer",
+      "RDKit_Chi1_polymer",
+      "RDKit_Chi1n_polymer",
+      "RDKit_Chi1v_polymer",
+      "RDKit_Chi2n_polymer",
+      "RDKit_Chi2v_polymer",
+      "RDKit_Chi3n_polymer",
+      "RDKit_Chi3v_polymer",
+      "RDKit_Chi4n_polymer",
+      "RDKit_Chi4v_polymer",
+      "RDKit_HallKierAlpha_polymer",
+      "RDKit_Ipc_polymer",
+      "RDKit_Kappa1_polymer",
+      "RDKit_Kappa2_polymer",
+      "RDKit_Kappa3_polymer",
+      "RDKit_LabuteASA_polymer",
+      "RDKit_PEOE_VSA14_polymer",
+      "RDKit_SMR_VSA1_polymer",
+      "RDKit_SMR_VSA10_polymer",
+      "RDKit_SMR_VSA3_polymer",
+      "RDKit_SMR_VSA4_polymer",
+      "RDKit_SMR_VSA5_polymer",
+      "RDKit_SMR_VSA6_polymer",
+      "RDKit_SMR_VSA7_polymer",
+      "RDKit_SMR_VSA9_polymer",
+      "RDKit_SlogP_VSA1_polymer",
+      "RDKit_SlogP_VSA10_polymer",
+      "RDKit_SlogP_VSA11_polymer",
+      "RDKit_SlogP_VSA12_polymer",
+      "RDKit_SlogP_VSA2_polymer",
+      "RDKit_SlogP_VSA3_polymer",
+      "RDKit_SlogP_VSA4_polymer",
+      "RDKit_SlogP_VSA5_polymer",
+      "RDKit_SlogP_VSA6_polymer",
+      "RDKit_SlogP_VSA7_polymer",
+      "RDKit_TPSA_polymer",
+      "RDKit_EState_VSA1_polymer",
+      "RDKit_EState_VSA10_polymer",
+      "RDKit_EState_VSA2_polymer",
+      "RDKit_EState_VSA3_polymer",
+      "RDKit_EState_VSA4_polymer",
+      "RDKit_EState_VSA5_polymer",
+      "RDKit_EState_VSA6_polymer",
+      "RDKit_EState_VSA7_polymer",
+      "RDKit_EState_VSA8_polymer",
+      "RDKit_EState_VSA9_polymer",
+      "RDKit_VSA_EState1_polymer",
+      "RDKit_VSA_EState10_polymer",
+      "RDKit_VSA_EState2_polymer",
+      "RDKit_VSA_EState3_polymer",
+      "RDKit_VSA_EState4_polymer",
+      "RDKit_VSA_EState5_polymer",
+      "RDKit_VSA_EState6_polymer",
+      "RDKit_VSA_EState7_polymer",
+      "RDKit_VSA_EState8_polymer",
+      "RDKit_VSA_EState9_polymer",
+      "RDKit_FractionCSP3_polymer",
+      "RDKit_HeavyAtomCount_polymer",
+      "RDKit_NHOHCount_polymer",
+      "RDKit_NOCount_polymer",
+      "RDKit_NumAliphaticHeterocycles_polymer",
+      "RDKit_NumAliphaticRings_polymer",
+      "RDKit_NumAromaticCarbocycles_polymer",
+      "RDKit_NumAromaticHeterocycles_polymer",
+      "RDKit_NumAromaticRings_polymer",
+      "RDKit_NumHAcceptors_polymer",
+      "RDKit_NumHDonors_polymer",
+      "RDKit_NumHeteroatoms_polymer",
+      "RDKit_NumRotatableBonds_polymer",
+      "RDKit_NumSaturatedHeterocycles_polymer",
+      "RDKit_NumSaturatedRings_polymer",
+      "RDKit_RingCount_polymer",
+      "RDKit_MolLogP_polymer",
+      "RDKit_MolMR_polymer",
+      "RDKit_fr_Al_OH_polymer",
+      "RDKit_fr_Al_OH_noTert_polymer",
+      "RDKit_fr_ArN_polymer",
+      "RDKit_fr_Ar_N_polymer",
+      "RDKit_fr_Ar_OH_polymer",
+      "RDKit_fr_C_O_polymer",
+      "RDKit_fr_C_O_noCOO_polymer",
+      "RDKit_fr_NH0_polymer",
+      "RDKit_fr_NH1_polymer",
+      "RDKit_fr_NH2_polymer",
+      "RDKit_fr_alkyl_halide_polymer",
+      "RDKit_fr_allylic_oxid_polymer",
+      "RDKit_fr_amide_polymer",
+      "RDKit_fr_aniline_polymer",
+      "RDKit_fr_aryl_methyl_polymer",
+      "RDKit_fr_benzene_polymer",
+      "RDKit_fr_ester_polymer",
+      "RDKit_fr_ether_polymer",
+      "RDKit_fr_furan_polymer",
+      "RDKit_fr_halogen_polymer",
+      "RDKit_fr_ketone_polymer",
+      "RDKit_fr_methoxy_polymer",
+      "RDKit_fr_para_hydroxylation_polymer",
+      "RDKit_fr_phenol_polymer",
+      "RDKit_fr_phenol_noOrthoHbond_polymer",
+      "RDKit_fr_sulfone_polymer",
+      "RDKit_fr_unbrch_alkane_polymer",
+      "RDKit_fr_urea_polymer"
+    ],
+    "FF_mass_solvent_cols": [
+      "FF_mass_H_solvent",
+      "FF_mass_C_solvent",
+      "FF_mass_N_solvent",
+      "FF_mass_O_solvent",
+      "FF_mass_F_solvent",
+      "FF_mass_P_solvent",
+      "FF_mass_S_solvent",
+      "FF_mass_Cl_solvent",
+      "FF_mass_Br_solvent"
+    ],
+    "FF_charge_solvent_cols": [
+      "FF_charge_2_solvent",
+      "FF_charge_3_solvent",
+      "FF_charge_4_solvent",
+      "FF_charge_5_solvent",
+      "FF_charge_6_solvent",
+      "FF_charge_7_solvent",
+      "FF_charge_8_solvent",
+      "FF_charge_9_solvent",
+      "FF_charge_10_solvent",
+      "FF_charge_11_solvent",
+      "FF_charge_12_solvent",
+      "FF_charge_13_solvent",
+      "FF_charge_14_solvent",
+      "FF_charge_15_solvent",
+      "FF_charge_16_solvent",
+      "FF_charge_17_solvent",
+      "FF_charge_18_solvent"
+    ],
+    "FF_epsilon_solvent_cols": [
+      "FF_epsilon_0_solvent",
+      "FF_epsilon_1_solvent",
+      "FF_epsilon_2_solvent",
+      "FF_epsilon_3_solvent",
+      "FF_epsilon_4_solvent",
+      "FF_epsilon_5_solvent",
+      "FF_epsilon_6_solvent",
+      "FF_epsilon_7_solvent",
+      "FF_epsilon_8_solvent",
+      "FF_epsilon_9_solvent",
+      "FF_epsilon_10_solvent",
+      "FF_epsilon_11_solvent",
+      "FF_epsilon_12_solvent",
+      "FF_epsilon_13_solvent",
+      "FF_epsilon_14_solvent",
+      "FF_epsilon_15_solvent",
+      "FF_epsilon_16_solvent",
+      "FF_epsilon_17_solvent",
+      "FF_epsilon_18_solvent"
+    ],
+    "FF_sigma_solvent_cols": [
+      "FF_sigma_0_solvent",
+      "FF_sigma_1_solvent",
+      "FF_sigma_2_solvent",
+      "FF_sigma_3_solvent",
+      "FF_sigma_4_solvent",
+      "FF_sigma_5_solvent",
+      "FF_sigma_6_solvent",
+      "FF_sigma_7_solvent",
+      "FF_sigma_8_solvent",
+      "FF_sigma_9_solvent",
+      "FF_sigma_10_solvent",
+      "FF_sigma_11_solvent",
+      "FF_sigma_12_solvent",
+      "FF_sigma_13_solvent",
+      "FF_sigma_14_solvent",
+      "FF_sigma_15_solvent",
+      "FF_sigma_16_solvent",
+      "FF_sigma_17_solvent",
+      "FF_sigma_18_solvent",
+      "FF_sigma_19_solvent"
+    ],
+    "FF_k_bond_solvent_cols": [
+      "FF_k_bond_0_solvent",
+      "FF_k_bond_1_solvent",
+      "FF_k_bond_2_solvent",
+      "FF_k_bond_3_solvent",
+      "FF_k_bond_4_solvent",
+      "FF_k_bond_5_solvent",
+      "FF_k_bond_6_solvent",
+      "FF_k_bond_7_solvent",
+      "FF_k_bond_8_solvent",
+      "FF_k_bond_9_solvent",
+      "FF_k_bond_10_solvent",
+      "FF_k_bond_11_solvent",
+      "FF_k_bond_12_solvent",
+      "FF_k_bond_13_solvent",
+      "FF_k_bond_14_solvent",
+      "FF_k_bond_15_solvent",
+      "FF_k_bond_16_solvent",
+      "FF_k_bond_17_solvent",
+      "FF_k_bond_18_solvent",
+      "FF_k_bond_19_solvent"
+    ],
+    "FF_r0_solvent_cols": [
+      "FF_r0_0_solvent",
+      "FF_r0_1_solvent",
+      "FF_r0_2_solvent",
+      "FF_r0_3_solvent",
+      "FF_r0_4_solvent",
+      "FF_r0_5_solvent",
+      "FF_r0_6_solvent",
+      "FF_r0_7_solvent",
+      "FF_r0_8_solvent",
+      "FF_r0_9_solvent",
+      "FF_r0_10_solvent",
+      "FF_r0_11_solvent",
+      "FF_r0_12_solvent",
+      "FF_r0_13_solvent"
+    ],
+    "FF_polar_solvent_cols": [
+      "FF_polar_0_solvent",
+      "FF_polar_1_solvent",
+      "FF_polar_2_solvent",
+      "FF_polar_3_solvent",
+      "FF_polar_4_solvent",
+      "FF_polar_5_solvent",
+      "FF_polar_6_solvent",
+      "FF_polar_7_solvent",
+      "FF_polar_8_solvent",
+      "FF_polar_9_solvent",
+      "FF_polar_10_solvent",
+      "FF_polar_11_solvent",
+      "FF_polar_12_solvent"
+    ],
+    "FF_k_angle_solvent_cols": [
+      "FF_k_angle_0_solvent",
+      "FF_k_angle_1_solvent",
+      "FF_k_angle_2_solvent",
+      "FF_k_angle_3_solvent",
+      "FF_k_angle_4_solvent",
+      "FF_k_angle_5_solvent",
+      "FF_k_angle_6_solvent",
+      "FF_k_angle_7_solvent",
+      "FF_k_angle_8_solvent",
+      "FF_k_angle_9_solvent",
+      "FF_k_angle_10_solvent",
+      "FF_k_angle_11_solvent",
+      "FF_k_angle_12_solvent",
+      "FF_k_angle_13_solvent",
+      "FF_k_angle_14_solvent",
+      "FF_k_angle_15_solvent",
+      "FF_k_angle_16_solvent",
+      "FF_k_angle_17_solvent"
+    ],
+    "FF_theta0_solvent_cols": [
+      "FF_theta0_0_solvent",
+      "FF_theta0_1_solvent",
+      "FF_theta0_2_solvent",
+      "FF_theta0_3_solvent",
+      "FF_theta0_4_solvent",
+      "FF_theta0_5_solvent",
+      "FF_theta0_6_solvent",
+      "FF_theta0_7_solvent",
+      "FF_theta0_8_solvent",
+      "FF_theta0_9_solvent",
+      "FF_theta0_10_solvent",
+      "FF_theta0_11_solvent",
+      "FF_theta0_12_solvent",
+      "FF_theta0_13_solvent",
+      "FF_theta0_14_solvent",
+      "FF_theta0_15_solvent",
+      "FF_theta0_16_solvent",
+      "FF_theta0_17_solvent",
+      "FF_theta0_18_solvent",
+      "FF_theta0_19_solvent"
+    ],
+    "FF_k_dih_solvent_cols": [
+      "FF_k_dih_0_solvent",
+      "FF_k_dih_1_solvent",
+      "FF_k_dih_2_solvent",
+      "FF_k_dih_3_solvent",
+      "FF_k_dih_4_solvent",
+      "FF_k_dih_5_solvent",
+      "FF_k_dih_6_solvent",
+      "FF_k_dih_7_solvent",
+      "FF_k_dih_8_solvent",
+      "FF_k_dih_9_solvent",
+      "FF_k_dih_10_solvent",
+      "FF_k_dih_11_solvent",
+      "FF_k_dih_12_solvent",
+      "FF_k_dih_13_solvent",
+      "FF_k_dih_14_solvent"
+    ],
+    "FF_mass_polymer_cols": [
+      "FF_mass_H_polymer",
+      "FF_mass_C_polymer",
+      "FF_mass_N_polymer",
+      "FF_mass_O_polymer",
+      "FF_mass_F_polymer",
+      "FF_mass_P_polymer",
+      "FF_mass_S_polymer",
+      "FF_mass_Cl_polymer"
+    ],
+    "FF_charge_polymer_cols": [
+      "FF_charge_2_polymer",
+      "FF_charge_3_polymer",
+      "FF_charge_4_polymer",
+      "FF_charge_5_polymer",
+      "FF_charge_6_polymer",
+      "FF_charge_7_polymer",
+      "FF_charge_8_polymer",
+      "FF_charge_9_polymer",
+      "FF_charge_10_polymer",
+      "FF_charge_11_polymer",
+      "FF_charge_12_polymer",
+      "FF_charge_13_polymer",
+      "FF_charge_14_polymer",
+      "FF_charge_15_polymer",
+      "FF_charge_16_polymer",
+      "FF_charge_17_polymer"
+    ],
+    "FF_epsilon_polymer_cols": [
+      "FF_epsilon_0_polymer",
+      "FF_epsilon_1_polymer",
+      "FF_epsilon_2_polymer",
+      "FF_epsilon_3_polymer",
+      "FF_epsilon_4_polymer",
+      "FF_epsilon_5_polymer",
+      "FF_epsilon_6_polymer",
+      "FF_epsilon_7_polymer",
+      "FF_epsilon_8_polymer",
+      "FF_epsilon_9_polymer",
+      "FF_epsilon_10_polymer",
+      "FF_epsilon_11_polymer",
+      "FF_epsilon_12_polymer",
+      "FF_epsilon_13_polymer"
+    ],
+    "FF_sigma_polymer_cols": [
+      "FF_sigma_11_polymer",
+      "FF_sigma_12_polymer",
+      "FF_sigma_13_polymer",
+      "FF_sigma_14_polymer",
+      "FF_sigma_15_polymer",
+      "FF_sigma_16_polymer",
+      "FF_sigma_17_polymer",
+      "FF_sigma_18_polymer",
+      "FF_sigma_19_polymer"
+    ],
+    "FF_k_bond_polymer_cols": [
+      "FF_k_bond_0_polymer",
+      "FF_k_bond_1_polymer",
+      "FF_k_bond_2_polymer",
+      "FF_k_bond_3_polymer",
+      "FF_k_bond_4_polymer",
+      "FF_k_bond_5_polymer",
+      "FF_k_bond_6_polymer",
+      "FF_k_bond_7_polymer",
+      "FF_k_bond_8_polymer",
+      "FF_k_bond_9_polymer",
+      "FF_k_bond_10_polymer",
+      "FF_k_bond_11_polymer",
+      "FF_k_bond_12_polymer",
+      "FF_k_bond_13_polymer",
+      "FF_k_bond_14_polymer",
+      "FF_k_bond_15_polymer",
+      "FF_k_bond_16_polymer",
+      "FF_k_bond_17_polymer"
+    ],
+    "FF_r0_polymer_cols": [
+      "FF_r0_0_polymer",
+      "FF_r0_1_polymer",
+      "FF_r0_2_polymer",
+      "FF_r0_3_polymer",
+      "FF_r0_4_polymer",
+      "FF_r0_5_polymer",
+      "FF_r0_6_polymer",
+      "FF_r0_7_polymer",
+      "FF_r0_8_polymer",
+      "FF_r0_9_polymer",
+      "FF_r0_10_polymer",
+      "FF_r0_11_polymer"
+    ],
+    "FF_polar_polymer_cols": [
+      "FF_polar_0_polymer",
+      "FF_polar_1_polymer",
+      "FF_polar_2_polymer",
+      "FF_polar_3_polymer",
+      "FF_polar_4_polymer",
+      "FF_polar_5_polymer",
+      "FF_polar_6_polymer",
+      "FF_polar_7_polymer",
+      "FF_polar_8_polymer",
+      "FF_polar_9_polymer",
+      "FF_polar_10_polymer",
+      "FF_polar_11_polymer"
+    ],
+    "FF_k_angle_polymer_cols": [
+      "FF_k_angle_2_polymer",
+      "FF_k_angle_3_polymer",
+      "FF_k_angle_4_polymer",
+      "FF_k_angle_5_polymer",
+      "FF_k_angle_6_polymer",
+      "FF_k_angle_7_polymer",
+      "FF_k_angle_8_polymer",
+      "FF_k_angle_9_polymer",
+      "FF_k_angle_10_polymer",
+      "FF_k_angle_11_polymer",
+      "FF_k_angle_12_polymer",
+      "FF_k_angle_13_polymer",
+      "FF_k_angle_14_polymer",
+      "FF_k_angle_15_polymer",
+      "FF_k_angle_16_polymer",
+      "FF_k_angle_17_polymer"
+    ],
+    "FF_theta0_polymer_cols": [
+      "FF_theta0_5_polymer",
+      "FF_theta0_6_polymer",
+      "FF_theta0_7_polymer",
+      "FF_theta0_8_polymer",
+      "FF_theta0_9_polymer",
+      "FF_theta0_10_polymer",
+      "FF_theta0_11_polymer",
+      "FF_theta0_12_polymer",
+      "FF_theta0_13_polymer",
+      "FF_theta0_14_polymer"
+    ],
+    "FF_k_dih_polymer_cols": [
+      "FF_k_dih_0_polymer",
+      "FF_k_dih_1_polymer",
+      "FF_k_dih_2_polymer",
+      "FF_k_dih_3_polymer",
+      "FF_k_dih_4_polymer",
+      "FF_k_dih_5_polymer",
+      "FF_k_dih_6_polymer",
+      "FF_k_dih_7_polymer",
+      "FF_k_dih_8_polymer",
+      "FF_k_dih_9_polymer",
+      "FF_k_dih_10_polymer",
+      "FF_k_dih_11_polymer",
+      "FF_k_dih_12_polymer",
+      "FF_k_dih_13_polymer",
+      "FF_k_dih_14_polymer"
+    ],
+    "FF_mass_cols": [
+      "FF_mass_H_polymer",
+      "FF_mass_C_polymer",
+      "FF_mass_N_polymer",
+      "FF_mass_O_polymer",
+      "FF_mass_F_polymer",
+      "FF_mass_P_polymer",
+      "FF_mass_S_polymer",
+      "FF_mass_Cl_polymer",
+      "FF_mass_H_solvent",
+      "FF_mass_C_solvent",
+      "FF_mass_N_solvent",
+      "FF_mass_O_solvent",
+      "FF_mass_F_solvent",
+      "FF_mass_P_solvent",
+      "FF_mass_S_solvent",
+      "FF_mass_Cl_solvent",
+      "FF_mass_Br_solvent"
+    ],
+    "FF_charge_cols": [
+      "FF_charge_2_polymer",
+      "FF_charge_3_polymer",
+      "FF_charge_4_polymer",
+      "FF_charge_5_polymer",
+      "FF_charge_6_polymer",
+      "FF_charge_7_polymer",
+      "FF_charge_8_polymer",
+      "FF_charge_9_polymer",
+      "FF_charge_10_polymer",
+      "FF_charge_11_polymer",
+      "FF_charge_12_polymer",
+      "FF_charge_13_polymer",
+      "FF_charge_14_polymer",
+      "FF_charge_15_polymer",
+      "FF_charge_16_polymer",
+      "FF_charge_17_polymer",
+      "FF_charge_2_solvent",
+      "FF_charge_3_solvent",
+      "FF_charge_4_solvent",
+      "FF_charge_5_solvent",
+      "FF_charge_6_solvent",
+      "FF_charge_7_solvent",
+      "FF_charge_8_solvent",
+      "FF_charge_9_solvent",
+      "FF_charge_10_solvent",
+      "FF_charge_11_solvent",
+      "FF_charge_12_solvent",
+      "FF_charge_13_solvent",
+      "FF_charge_14_solvent",
+      "FF_charge_15_solvent",
+      "FF_charge_16_solvent",
+      "FF_charge_17_solvent",
+      "FF_charge_18_solvent"
+    ],
+    "FF_epsilon_cols": [
+      "FF_epsilon_0_polymer",
+      "FF_epsilon_1_polymer",
+      "FF_epsilon_2_polymer",
+      "FF_epsilon_3_polymer",
+      "FF_epsilon_4_polymer",
+      "FF_epsilon_5_polymer",
+      "FF_epsilon_6_polymer",
+      "FF_epsilon_7_polymer",
+      "FF_epsilon_8_polymer",
+      "FF_epsilon_9_polymer",
+      "FF_epsilon_10_polymer",
+      "FF_epsilon_11_polymer",
+      "FF_epsilon_12_polymer",
+      "FF_epsilon_13_polymer",
+      "FF_epsilon_0_solvent",
+      "FF_epsilon_1_solvent",
+      "FF_epsilon_2_solvent",
+      "FF_epsilon_3_solvent",
+      "FF_epsilon_4_solvent",
+      "FF_epsilon_5_solvent",
+      "FF_epsilon_6_solvent",
+      "FF_epsilon_7_solvent",
+      "FF_epsilon_8_solvent",
+      "FF_epsilon_9_solvent",
+      "FF_epsilon_10_solvent",
+      "FF_epsilon_11_solvent",
+      "FF_epsilon_12_solvent",
+      "FF_epsilon_13_solvent",
+      "FF_epsilon_14_solvent",
+      "FF_epsilon_15_solvent",
+      "FF_epsilon_16_solvent",
+      "FF_epsilon_17_solvent",
+      "FF_epsilon_18_solvent"
+    ],
+    "FF_sigma_cols": [
+      "FF_sigma_11_polymer",
+      "FF_sigma_12_polymer",
+      "FF_sigma_13_polymer",
+      "FF_sigma_14_polymer",
+      "FF_sigma_15_polymer",
+      "FF_sigma_16_polymer",
+      "FF_sigma_17_polymer",
+      "FF_sigma_18_polymer",
+      "FF_sigma_19_polymer",
+      "FF_sigma_0_solvent",
+      "FF_sigma_1_solvent",
+      "FF_sigma_2_solvent",
+      "FF_sigma_3_solvent",
+      "FF_sigma_4_solvent",
+      "FF_sigma_5_solvent",
+      "FF_sigma_6_solvent",
+      "FF_sigma_7_solvent",
+      "FF_sigma_8_solvent",
+      "FF_sigma_9_solvent",
+      "FF_sigma_10_solvent",
+      "FF_sigma_11_solvent",
+      "FF_sigma_12_solvent",
+      "FF_sigma_13_solvent",
+      "FF_sigma_14_solvent",
+      "FF_sigma_15_solvent",
+      "FF_sigma_16_solvent",
+      "FF_sigma_17_solvent",
+      "FF_sigma_18_solvent",
+      "FF_sigma_19_solvent"
+    ],
+    "FF_k_bond_cols": [
+      "FF_k_bond_0_polymer",
+      "FF_k_bond_1_polymer",
+      "FF_k_bond_2_polymer",
+      "FF_k_bond_3_polymer",
+      "FF_k_bond_4_polymer",
+      "FF_k_bond_5_polymer",
+      "FF_k_bond_6_polymer",
+      "FF_k_bond_7_polymer",
+      "FF_k_bond_8_polymer",
+      "FF_k_bond_9_polymer",
+      "FF_k_bond_10_polymer",
+      "FF_k_bond_11_polymer",
+      "FF_k_bond_12_polymer",
+      "FF_k_bond_13_polymer",
+      "FF_k_bond_14_polymer",
+      "FF_k_bond_15_polymer",
+      "FF_k_bond_16_polymer",
+      "FF_k_bond_17_polymer",
+      "FF_k_bond_0_solvent",
+      "FF_k_bond_1_solvent",
+      "FF_k_bond_2_solvent",
+      "FF_k_bond_3_solvent",
+      "FF_k_bond_4_solvent",
+      "FF_k_bond_5_solvent",
+      "FF_k_bond_6_solvent",
+      "FF_k_bond_7_solvent",
+      "FF_k_bond_8_solvent",
+      "FF_k_bond_9_solvent",
+      "FF_k_bond_10_solvent",
+      "FF_k_bond_11_solvent",
+      "FF_k_bond_12_solvent",
+      "FF_k_bond_13_solvent",
+      "FF_k_bond_14_solvent",
+      "FF_k_bond_15_solvent",
+      "FF_k_bond_16_solvent",
+      "FF_k_bond_17_solvent",
+      "FF_k_bond_18_solvent",
+      "FF_k_bond_19_solvent"
+    ],
+    "FF_r0_cols": [
+      "FF_r0_0_polymer",
+      "FF_r0_1_polymer",
+      "FF_r0_2_polymer",
+      "FF_r0_3_polymer",
+      "FF_r0_4_polymer",
+      "FF_r0_5_polymer",
+      "FF_r0_6_polymer",
+      "FF_r0_7_polymer",
+      "FF_r0_8_polymer",
+      "FF_r0_9_polymer",
+      "FF_r0_10_polymer",
+      "FF_r0_11_polymer",
+      "FF_r0_0_solvent",
+      "FF_r0_1_solvent",
+      "FF_r0_2_solvent",
+      "FF_r0_3_solvent",
+      "FF_r0_4_solvent",
+      "FF_r0_5_solvent",
+      "FF_r0_6_solvent",
+      "FF_r0_7_solvent",
+      "FF_r0_8_solvent",
+      "FF_r0_9_solvent",
+      "FF_r0_10_solvent",
+      "FF_r0_11_solvent",
+      "FF_r0_12_solvent",
+      "FF_r0_13_solvent"
+    ],
+    "FF_polar_cols": [
+      "FF_polar_0_polymer",
+      "FF_polar_1_polymer",
+      "FF_polar_2_polymer",
+      "FF_polar_3_polymer",
+      "FF_polar_4_polymer",
+      "FF_polar_5_polymer",
+      "FF_polar_6_polymer",
+      "FF_polar_7_polymer",
+      "FF_polar_8_polymer",
+      "FF_polar_9_polymer",
+      "FF_polar_10_polymer",
+      "FF_polar_11_polymer",
+      "FF_polar_0_solvent",
+      "FF_polar_1_solvent",
+      "FF_polar_2_solvent",
+      "FF_polar_3_solvent",
+      "FF_polar_4_solvent",
+      "FF_polar_5_solvent",
+      "FF_polar_6_solvent",
+      "FF_polar_7_solvent",
+      "FF_polar_8_solvent",
+      "FF_polar_9_solvent",
+      "FF_polar_10_solvent",
+      "FF_polar_11_solvent",
+      "FF_polar_12_solvent"
+    ],
+    "FF_k_angle_cols": [
+      "FF_k_angle_2_polymer",
+      "FF_k_angle_3_polymer",
+      "FF_k_angle_4_polymer",
+      "FF_k_angle_5_polymer",
+      "FF_k_angle_6_polymer",
+      "FF_k_angle_7_polymer",
+      "FF_k_angle_8_polymer",
+      "FF_k_angle_9_polymer",
+      "FF_k_angle_10_polymer",
+      "FF_k_angle_11_polymer",
+      "FF_k_angle_12_polymer",
+      "FF_k_angle_13_polymer",
+      "FF_k_angle_14_polymer",
+      "FF_k_angle_15_polymer",
+      "FF_k_angle_16_polymer",
+      "FF_k_angle_17_polymer",
+      "FF_k_angle_0_solvent",
+      "FF_k_angle_1_solvent",
+      "FF_k_angle_2_solvent",
+      "FF_k_angle_3_solvent",
+      "FF_k_angle_4_solvent",
+      "FF_k_angle_5_solvent",
+      "FF_k_angle_6_solvent",
+      "FF_k_angle_7_solvent",
+      "FF_k_angle_8_solvent",
+      "FF_k_angle_9_solvent",
+      "FF_k_angle_10_solvent",
+      "FF_k_angle_11_solvent",
+      "FF_k_angle_12_solvent",
+      "FF_k_angle_13_solvent",
+      "FF_k_angle_14_solvent",
+      "FF_k_angle_15_solvent",
+      "FF_k_angle_16_solvent",
+      "FF_k_angle_17_solvent"
+    ],
+    "FF_theta0_cols": [
+      "FF_theta0_5_polymer",
+      "FF_theta0_6_polymer",
+      "FF_theta0_7_polymer",
+      "FF_theta0_8_polymer",
+      "FF_theta0_9_polymer",
+      "FF_theta0_10_polymer",
+      "FF_theta0_11_polymer",
+      "FF_theta0_12_polymer",
+      "FF_theta0_13_polymer",
+      "FF_theta0_14_polymer",
+      "FF_theta0_0_solvent",
+      "FF_theta0_1_solvent",
+      "FF_theta0_2_solvent",
+      "FF_theta0_3_solvent",
+      "FF_theta0_4_solvent",
+      "FF_theta0_5_solvent",
+      "FF_theta0_6_solvent",
+      "FF_theta0_7_solvent",
+      "FF_theta0_8_solvent",
+      "FF_theta0_9_solvent",
+      "FF_theta0_10_solvent",
+      "FF_theta0_11_solvent",
+      "FF_theta0_12_solvent",
+      "FF_theta0_13_solvent",
+      "FF_theta0_14_solvent",
+      "FF_theta0_15_solvent",
+      "FF_theta0_16_solvent",
+      "FF_theta0_17_solvent",
+      "FF_theta0_18_solvent",
+      "FF_theta0_19_solvent"
+    ],
+    "FF_k_dih_cols": [
+      "FF_k_dih_0_polymer",
+      "FF_k_dih_1_polymer",
+      "FF_k_dih_2_polymer",
+      "FF_k_dih_3_polymer",
+      "FF_k_dih_4_polymer",
+      "FF_k_dih_5_polymer",
+      "FF_k_dih_6_polymer",
+      "FF_k_dih_7_polymer",
+      "FF_k_dih_8_polymer",
+      "FF_k_dih_9_polymer",
+      "FF_k_dih_10_polymer",
+      "FF_k_dih_11_polymer",
+      "FF_k_dih_12_polymer",
+      "FF_k_dih_13_polymer",
+      "FF_k_dih_14_polymer",
+      "FF_k_dih_0_solvent",
+      "FF_k_dih_1_solvent",
+      "FF_k_dih_2_solvent",
+      "FF_k_dih_3_solvent",
+      "FF_k_dih_4_solvent",
+      "FF_k_dih_5_solvent",
+      "FF_k_dih_6_solvent",
+      "FF_k_dih_7_solvent",
+      "FF_k_dih_8_solvent",
+      "FF_k_dih_9_solvent",
+      "FF_k_dih_10_solvent",
+      "FF_k_dih_11_solvent",
+      "FF_k_dih_12_solvent",
+      "FF_k_dih_13_solvent",
+      "FF_k_dih_14_solvent"
+    ],
+    "FF_solvent_wo_polars_cols": [
+      "FF_mass_H_solvent",
+      "FF_mass_C_solvent",
+      "FF_mass_N_solvent",
+      "FF_mass_O_solvent",
+      "FF_mass_F_solvent",
+      "FF_mass_P_solvent",
+      "FF_mass_S_solvent",
+      "FF_mass_Cl_solvent",
+      "FF_mass_Br_solvent",
+      "FF_charge_2_solvent",
+      "FF_charge_3_solvent",
+      "FF_charge_4_solvent",
+      "FF_charge_5_solvent",
+      "FF_charge_6_solvent",
+      "FF_charge_7_solvent",
+      "FF_charge_8_solvent",
+      "FF_charge_9_solvent",
+      "FF_charge_10_solvent",
+      "FF_charge_11_solvent",
+      "FF_charge_12_solvent",
+      "FF_charge_13_solvent",
+      "FF_charge_14_solvent",
+      "FF_charge_15_solvent",
+      "FF_charge_16_solvent",
+      "FF_charge_17_solvent",
+      "FF_charge_18_solvent",
+      "FF_epsilon_0_solvent",
+      "FF_epsilon_1_solvent",
+      "FF_epsilon_2_solvent",
+      "FF_epsilon_3_solvent",
+      "FF_epsilon_4_solvent",
+      "FF_epsilon_5_solvent",
+      "FF_epsilon_6_solvent",
+      "FF_epsilon_7_solvent",
+      "FF_epsilon_8_solvent",
+      "FF_epsilon_9_solvent",
+      "FF_epsilon_10_solvent",
+      "FF_epsilon_11_solvent",
+      "FF_epsilon_12_solvent",
+      "FF_epsilon_13_solvent",
+      "FF_epsilon_14_solvent",
+      "FF_epsilon_15_solvent",
+      "FF_epsilon_16_solvent",
+      "FF_epsilon_17_solvent",
+      "FF_epsilon_18_solvent",
+      "FF_sigma_0_solvent",
+      "FF_sigma_1_solvent",
+      "FF_sigma_2_solvent",
+      "FF_sigma_3_solvent",
+      "FF_sigma_4_solvent",
+      "FF_sigma_5_solvent",
+      "FF_sigma_6_solvent",
+      "FF_sigma_7_solvent",
+      "FF_sigma_8_solvent",
+      "FF_sigma_9_solvent",
+      "FF_sigma_10_solvent",
+      "FF_sigma_11_solvent",
+      "FF_sigma_12_solvent",
+      "FF_sigma_13_solvent",
+      "FF_sigma_14_solvent",
+      "FF_sigma_15_solvent",
+      "FF_sigma_16_solvent",
+      "FF_sigma_17_solvent",
+      "FF_sigma_18_solvent",
+      "FF_sigma_19_solvent",
+      "FF_k_bond_0_solvent",
+      "FF_k_bond_1_solvent",
+      "FF_k_bond_2_solvent",
+      "FF_k_bond_3_solvent",
+      "FF_k_bond_4_solvent",
+      "FF_k_bond_5_solvent",
+      "FF_k_bond_6_solvent",
+      "FF_k_bond_7_solvent",
+      "FF_k_bond_8_solvent",
+      "FF_k_bond_9_solvent",
+      "FF_k_bond_10_solvent",
+      "FF_k_bond_11_solvent",
+      "FF_k_bond_12_solvent",
+      "FF_k_bond_13_solvent",
+      "FF_k_bond_14_solvent",
+      "FF_k_bond_15_solvent",
+      "FF_k_bond_16_solvent",
+      "FF_k_bond_17_solvent",
+      "FF_k_bond_18_solvent",
+      "FF_k_bond_19_solvent",
+      "FF_r0_0_solvent",
+      "FF_r0_1_solvent",
+      "FF_r0_2_solvent",
+      "FF_r0_3_solvent",
+      "FF_r0_4_solvent",
+      "FF_r0_5_solvent",
+      "FF_r0_6_solvent",
+      "FF_r0_7_solvent",
+      "FF_r0_8_solvent",
+      "FF_r0_9_solvent",
+      "FF_r0_10_solvent",
+      "FF_r0_11_solvent",
+      "FF_r0_12_solvent",
+      "FF_r0_13_solvent",
+      "FF_k_angle_0_solvent",
+      "FF_k_angle_1_solvent",
+      "FF_k_angle_2_solvent",
+      "FF_k_angle_3_solvent",
+      "FF_k_angle_4_solvent",
+      "FF_k_angle_5_solvent",
+      "FF_k_angle_6_solvent",
+      "FF_k_angle_7_solvent",
+      "FF_k_angle_8_solvent",
+      "FF_k_angle_9_solvent",
+      "FF_k_angle_10_solvent",
+      "FF_k_angle_11_solvent",
+      "FF_k_angle_12_solvent",
+      "FF_k_angle_13_solvent",
+      "FF_k_angle_14_solvent",
+      "FF_k_angle_15_solvent",
+      "FF_k_angle_16_solvent",
+      "FF_k_angle_17_solvent",
+      "FF_theta0_0_solvent",
+      "FF_theta0_1_solvent",
+      "FF_theta0_2_solvent",
+      "FF_theta0_3_solvent",
+      "FF_theta0_4_solvent",
+      "FF_theta0_5_solvent",
+      "FF_theta0_6_solvent",
+      "FF_theta0_7_solvent",
+      "FF_theta0_8_solvent",
+      "FF_theta0_9_solvent",
+      "FF_theta0_10_solvent",
+      "FF_theta0_11_solvent",
+      "FF_theta0_12_solvent",
+      "FF_theta0_13_solvent",
+      "FF_theta0_14_solvent",
+      "FF_theta0_15_solvent",
+      "FF_theta0_16_solvent",
+      "FF_theta0_17_solvent",
+      "FF_theta0_18_solvent",
+      "FF_theta0_19_solvent",
+      "FF_k_dih_0_solvent",
+      "FF_k_dih_1_solvent",
+      "FF_k_dih_2_solvent",
+      "FF_k_dih_3_solvent",
+      "FF_k_dih_4_solvent",
+      "FF_k_dih_5_solvent",
+      "FF_k_dih_6_solvent",
+      "FF_k_dih_7_solvent",
+      "FF_k_dih_8_solvent",
+      "FF_k_dih_9_solvent",
+      "FF_k_dih_10_solvent",
+      "FF_k_dih_11_solvent",
+      "FF_k_dih_12_solvent",
+      "FF_k_dih_13_solvent",
+      "FF_k_dih_14_solvent"
+    ]
+  },
+  "radonpy_polymer_cols": [
+    "density_radonpy_polymer",
+    "Rg_radonpy_polymer",
+    "Scaled_Rg_radonpy_polymer",
+    "self-diffusion_radonpy_polymer",
+    "Cp_radonpy_polymer",
+    "Cv_radonpy_polymer",
+    "compressibility_radonpy_polymer",
+    "isentropic_compressibility_radonpy_polymer",
+    "bulk_modulus_radonpy_polymer",
+    "isentropic_bulk_modulus_radonpy_polymer",
+    "volume_expansion_radonpy_polymer",
+    "linear_expansion_radonpy_polymer",
+    "r2_radonpy_polymer",
+    "static_dielectric_const_radonpy_polymer",
+    "dielectric_const_dc_radonpy_polymer",
+    "nematic_order_parameter_radonpy_polymer",
+    "refractive_index_radonpy_polymer"
+  ],
+  "polymer_name_dict": {
+    "*C*": {
+      "jp": "ポリエチレン",
+      "abbr": "PE",
+      "jp_abbr": "PE"
+    },
+    "*CC(C)*": {
+      "jp": "ポリプロピレン",
+      "abbr": "PP",
+      "jp_abbr": "PP"
+    },
+    "*CC(CC(C)C)*": {
+      "jp": "ポリメチルペンテン",
+      "abbr": "PMP",
+      "jp_abbr": "PMP"
+    },
+    "*CC(C)(C)*": {
+      "jp": "ポリイソブチレン",
+      "abbr": "PIB",
+      "jp_abbr": "PIB"
+    },
+    "*CC(c1ccccc1)*": {
+      "jp": "ポリスチレン",
+      "abbr": "PS",
+      "jp_abbr": "PS"
+    },
+    "*CC(O)*": {
+      "jp": "ポリビニルアルコール",
+      "abbr": "PVA",
+      "jp_abbr": "PVA"
+    },
+    "*C(OC(=O)C)C*": {
+      "jp": "ポリ酢酸ビニル",
+      "abbr": "PVAc",
+      "jp_abbr": "PVAc"
+    },
+    "FC(OC(C(F)(F)*)(F)*)(F)F": {
+      "jp": "テトラフルオロエチレン・パーフルオロアルキルビニルエーテル共重合体",
+      "abbr": "PFA",
+      "jp_abbr": "PFA"
+    },
+    "*C(C(=O)OC)(C*)C": {
+      "jp": "polymethyl methacrylate (acrylic)",
+      "abbr": "PMMA",
+      "jp_abbr": "PMMA"
+    },
+    "*CC(Cl)*": {
+      "jp": "塩化ビニル樹脂硬質",
+      "abbr": "PVC",
+      "jp_abbr": "PVC"
+    },
+    "*CC(F)(F)*": {
+      "jp": "ポリフッ化ビニリデン",
+      "abbr": "PVDF",
+      "jp_abbr": "PVDF"
+    },
+    "*CC(Cl)(Cl)*": {
+      "jp": "塩化ビニリデン",
+      "abbr": "PVdC",
+      "jp_abbr": "PVdC"
+    },
+    "*C(F)(F)*": {
+      "jp": "フッ素(テフロン)",
+      "abbr": "PTFE",
+      "jp_abbr": "PTFE"
+    },
+    "*CCC=C(Cl)*": {
+      "jp": "クロロプレンゴム",
+      "abbr": "CR",
+      "jp_abbr": "CR"
+    },
+    "*CCC(C(Cl)(F)*)(F)F": {
+      "jp": "Halar^{®} ECTFE (ethylene-chlorotrifluoroethylene copolymer)",
+      "abbr": "ECTFE",
+      "jp_abbr": "ECTFE"
+    },
+    "*CCC(C(F)(F)*)(F)F": {
+      "jp": "Ethylene tetrafluoroethylene",
+      "abbr": "ETFE",
+      "jp_abbr": "ETFE"
+    },
+    "*OC*": {
+      "jp": "ポリオキシメチレン",
+      "abbr": "POM",
+      "jp_abbr": "POM"
+    },
+    "*OCC(CCl)(CCl)C*": {
+      "jp": "塩素化ポリエーテル",
+      "abbr": "CP",
+      "jp_abbr": "CP"
+    },
+    "*Oc1ccc(cc1)S(=O)(=O)c1ccc(cc1)Oc1ccc(cc1)C(c1ccc(cc1)*)(C)C": {
+      "jp": "ポリサルフォン",
+      "abbr": "PSF",
+      "jp_abbr": "PSF"
+    },
+    "*CC(COc1ccc(cc1)C(c1ccc(cc1)O*)(C)C)O": {
+      "jp": "エポキシ",
+      "abbr": "EP",
+      "jp_abbr": "EP"
+    },
+    "*Oc1ccc(cc1)Oc1ccc(cc1)C(=O)c1ccc(cc1)*": {
+      "jp": "ポリエーテルエーテルケトン",
+      "abbr": "PEEK",
+      "jp_abbr": "PEEK"
+    },
+    "*Sc1ccc(cc1)*": {
+      "jp": "ポリフェニレンサルファイド",
+      "abbr": "PPS",
+      "jp_abbr": "PPS"
+    },
+    "*CCOC(=O)c1ccc(cc1)C(=O)O*": {
+      "jp": "polyethylene teraphthalate",
+      "abbr": "PET",
+      "jp_abbr": "PET"
+    },
+    "*CCCCOC(=O)c1ccc(cc1)C(=O)O*": {
+      "jp": "ポリブチレンテレフタレート",
+      "abbr": "PBT",
+      "jp_abbr": "PBT"
+    },
+    "*CCCCCCOC(=O)/C=C/C(=O)O*": {
+      "jp": "不飽和ポリエステル",
+      "abbr": "FRP",
+      "jp_abbr": "FRP"
+    },
+    "*CCCCCC(=O)N*": {
+      "jp": "ポリアミド6",
+      "abbr": "PA6",
+      "jp_abbr": "PA6"
+    },
+    "*CCCCCCNC(=O)CCCCC(=O)N*": {
+      "jp": "ポリアミド(ナイロン)",
+      "abbr": "PA",
+      "jp_abbr": "PA"
+    },
+    "*CCCCCCCCCCCC(=O)N*": {
+      "jp": "ポリアミド12",
+      "abbr": "PA12",
+      "jp_abbr": "PA12"
+    },
+    "*CCCCCCNC(=O)N*": {
+      "jp": "ユリア",
+      "abbr": "UF",
+      "jp_abbr": "UF"
+    },
+    "*c1cccc(c1)N1C(=O)c2c(C1=O)cc(cc2)Oc1ccc(cc1)C(c1ccc(cc1)Oc1ccc2c(c1)C(=O)N(C2=O)*)(C)C": {
+      "jp": "polyetherimide",
+      "abbr": "PEI",
+      "jp_abbr": "PEI"
+    },
+    "*Oc1ccc(cc1)C(c1ccc(cc1)OC(=O)*)(C)C": {
+      "jp": "polycarbonate",
+      "abbr": "PC",
+      "jp_abbr": "PC"
+    },
+    "*CCc1ccc(cc1)*": {
+      "jp": "キシレン",
+      "abbr": "XR",
+      "jp_abbr": "XR"
+    },
+    "*CCCC(C)*": {
+      "jp": "ポリプロピレン共重合体",
+      "abbr": "PPCO",
+      "jp_abbr": "PPCO"
+    },
+    "FC(C(C(C(F)(F)F)(F)*)(F)F)(C(F)(F)*)F": {
+      "jp": "パーフルオロエチレンプロペンコポリマー",
+      "abbr": "FEP",
+      "jp_abbr": "FEP"
+    },
+    "*c1ccc(o1)*": {
+      "jp": "フラン",
+      "abbr": "FF",
+      "jp_abbr": "FF"
+    },
+    "*OC1C(COC(=O)C)OC(C(C1OC(=O)C)OC(=O)C)*": {
+      "jp": "酢酸セルロース",
+      "abbr": "CA",
+      "jp_abbr": "CA"
+    },
+    "*NC(=O)C=CC(=O)Nc1nc(*)nc(n1)N": {
+      "jp": "メラミン",
+      "abbr": "MF",
+      "jp_abbr": "MF"
+    },
+    "*CCCCNC(=O)O*": {
+      "jp": "ウレタンゴム",
+      "abbr": "AU,EU",
+      "jp_abbr": "AU,EU"
+    },
+    "*Cc1cccc(c1O)*": {
+      "jp": "フェノール",
+      "abbr": "PF",
+      "jp_abbr": "PF"
+    }
+  },
+  "solvent_name_dict": {
+    "ClCCCl": {
+      "jp_abbr": "Ethylene dichloride"
+    },
+    "NCCN": {
+      "jp_abbr": "Ethylene diamine"
+    },
+    "CCOCC": {
+      "jp_abbr": "Diethyl ether"
+    },
+    "CCN(C=O)CC": {
+      "jp_abbr": "Diethylformamide"
+    },
+    "CCCCCOC(C)=O": {
+      "jp_abbr": "Amyl acetate"
+    },
+    "CCCCOC(=O)c1ccccc1C(=O)OCCCC": {
+      "jp_abbr": "Dibutyl phthalate"
+    },
+    "Cc1ccc(O)cc1": {
+      "jp_abbr": "Cresol"
+    },
+    "ClCC(Cl)(Cl)Cl": {
+      "jp_abbr": "Tetrachloroethane"
+    },
+    "Cc1ccccc1": {
+      "jp_abbr": "Toluene"
+    },
+    "COC(C)(C)C": {
+      "jp_abbr": "Methyl-t-butyl ether"
+    },
+    "c1ccncc1": {
+      "jp_abbr": "Pyridine"
+    },
+    "CCC(=O)O": {
+      "jp_abbr": "Propionic acid"
+    },
+    "CCCCCCCCCC": {
+      "jp_abbr": "n-decane"
+    },
+    "CCCO": {
+      "jp_abbr": "Propyl alcohol"
+    },
+    "CC(O)CO": {
+      "jp_abbr": "Propylene glycol"
+    },
+    "CC1=CCC(C(C)(C)O)CC1": {
+      "jp_abbr": "Terpineol"
+    },
+    "Oc1ccccc1": {
+      "jp_abbr": "フェノール Phenol"
+    },
+    "CCCCCCCCCCCCCCCC(=O)O": {
+      "jp_abbr": "パルミチン酸 Palmitic acid"
+    },
+    "CC(C)C(=O)C(C)C": {
+      "jp_abbr": "Diisopropyl ketone"
+    },
+    "O=CCCCC=O": {
+      "jp_abbr": "Glutaraldehyde"
+    },
+    "CC(C)O": {
+      "jp_abbr": "Isopropyl alcohol"
+    },
+    "CC(=O)[O-].CC(=O)[O-].[Zn+2]": {
+      "jp_abbr": "酢酸亜鉛 Zinc acetate"
+    },
+    "CCCCCO": {
+      "jp_abbr": "Amylalcohol"
+    },
+    "CN(C)C=O": {
+      "jp_abbr": "Dimethyl formamide"
+    },
+    "CC(=O)[O-].CC(=O)[O-].[Ni+2]": {
+      "jp_abbr": "酢酸ニッケル Nickel acetate"
+    },
+    "ClC(Cl)Cl": {
+      "jp_abbr": "Chloroform"
+    },
+    "CCCCCC=O": {
+      "jp_abbr": "Hexaldehyde"
+    },
+    "Fc1ccccc1": {
+      "jp_abbr": "Fluorobenzene"
+    },
+    "CC(=O)[O-].CC(=O)[O-].[Ca+2]": {
+      "jp_abbr": "酢酸カルシウム Calcium acetate"
+    },
+    "O=C([O-])[O-].[Na+].[Na+]": {
+      "jp_abbr": "ソーダ灰/炭酸ナトリウム  Soda ash/Sodium  carbonate"
+    },
+    "C=C(C)C1CC=C(C)CC1": {
+      "jp_abbr": "ジペンテン,リモネン Dipentene"
+    },
+    "Nc1ccccc1": {
+      "jp_abbr": "Aniline"
+    },
+    "CC(C)CC(C)(C)C": {
+      "jp_abbr": "Isooctane"
+    },
+    "ClC(Cl)(Cl)Cl": {
+      "jp_abbr": "Carbon tetrachloride"
+    },
+    "OCC1OC(O)C(O)C(O)C1O": {
+      "jp_abbr": "グルコース Glucose"
+    },
+    "CCCCCCl": {
+      "jp_abbr": "塩化アミル Amyl Chloride"
+    },
+    "BrC(Br)Br": {
+      "jp_abbr": "Bromoform"
+    },
+    "CCCCCCCCCCCCCCCCCC(=O)O": {
+      "jp_abbr": "ステアリン酸 Stearic acid"
+    },
+    "[C-]#N.[Cu+]": {
+      "jp_abbr": "シアン化銅 Copper cyanide"
+    },
+    "Oc1cccc(O)c1": {
+      "jp_abbr": "レゾルシノール 5％ Resorcinol,5%"
+    },
+    "OCC1OC(OC2(CO)OC(CO)C(O)C2O)C(O)C(O)C1O": {
+      "jp_abbr": "ショ糖液 Sucrose solutions"
+    },
+    "C1CCCC1": {
+      "jp_abbr": "Cyclopentane"
+    },
+    "O=C(O)C(=O)O": {
+      "jp_abbr": "シュウ酸 Oxalic acid"
+    },
+    "CCCCCCCCO": {
+      "jp_abbr": "Octyl alcohol"
+    },
+    "O=C(O)CC(O)(CC(=O)O)C(=O)O": {
+      "jp_abbr": "クエン酸 Citric acid"
+    },
+    "CCCCCCCCOC(=O)CCCCCCCCC(=O)OCCCCCCCC": {
+      "jp_abbr": "ジオクチルセバケート Dioctyl sebacate (DOS)"
+    },
+    "O=C(O)CCl": {
+      "jp_abbr": "モノクロル酢酸 Chloroacetic acid"
+    },
+    "N.O=C(O)CO": {
+      "jp_abbr": "Ammonium Glycolate, pure"
+    },
+    "O=CO": {
+      "jp_abbr": "ギ酸 Formic acid 90RT"
+    },
+    "O=C=O": {
+      "jp_abbr": "炭酸ガス Carbon dioxide"
+    },
+    "CC1=CCC2CC1C2(C)C": {
+      "jp_abbr": "ピネン Pinene"
+    },
+    "CCCC(=O)O": {
+      "jp_abbr": "Butyric acid"
+    },
+    "O=C(O)/C=C\\C(=O)O": {
+      "jp_abbr": "マレイン酸 Maleic acid"
+    },
+    "CCCCO": {
+      "jp_abbr": "Butyl alcohol"
+    },
+    "CCCCCCCC/C=C\\CCCCCCCC(=O)O": {
+      "jp_abbr": "Oleic acid"
+    },
+    "OCc1ccccc1": {
+      "jp_abbr": "Benzyl alcohol"
+    },
+    "O=C([O-])O.[Na+]": {
+      "jp_abbr": "重炭酸ナトリウム Sodium bicarbonate"
+    },
+    "c1ccccc1": {
+      "jp_abbr": "Benzene"
+    },
+    "N.N.O=C(O)O": {
+      "jp_abbr": "炭酸アンモニウム Ammonium carbonate"
+    },
+    "O=Cc1ccccc1": {
+      "jp_abbr": "Benzaldehyde"
+    },
+    "CCCCCc1ccc2ccccc2c1": {
+      "jp_abbr": "Amyl naphthalene"
+    },
+    "Oc1cc(O)c2cc(O)c(-c3cc(O)c(O)c(O)c3)[o+]c2c1.[Cl-]": {
+      "jp_abbr": "Oil, Mineral, pure"
+    },
+    "O=C(O)c1ccccc1O": {
+      "jp_abbr": "サリチル酸 Salicylic acid"
+    },
+    "CC(O)COC(C)COC(C)CO": {
+      "jp_abbr": "Tripropylene glycol"
+    },
+    "CCCCCCCC": {
+      "jp_abbr": "n-octane"
+    },
+    "c1ccc2ccccc2c1": {
+      "jp_abbr": "ナフタリン Naphthalene"
+    },
+    "CC(=O)CC(C)(C)O": {
+      "jp_abbr": "Diacetone alcohol"
+    },
+    "CO": {
+      "jp_abbr": "Methyl alcohol"
+    },
+    "CCCCOC(C)=O": {
+      "jp_abbr": "Butyl acetate"
+    },
+    "O=C(O)C(O)C(O)C(=O)O": {
+      "jp_abbr": "酒石酸 Tartaric acid"
+    },
+    "Oc1ccc(O)cc1": {
+      "jp_abbr": "ハイドロキノン Hydroquinone"
+    },
+    "C#N": {
+      "jp_abbr": "シアン化水素酸 Hydrocyanic acid"
+    },
+    "C1COCCO1": {
+      "jp_abbr": "ジエチレンジオキシド Diethylene Dioxide"
+    },
+    "C[Si](C)(C)O[Si](C)(C)O[Si](C)(C)C": {
+      "jp_abbr": "Silicone Oil, pure"
+    },
+    "O=C(O)O": {
+      "jp_abbr": "炭酸 Carbonic acid"
+    },
+    "C=O": {
+      "jp_abbr": "ホルムアルデヒド  Formaldehyde 40RT"
+    },
+    "ClC(Cl)=C(Cl)Cl": {
+      "jp_abbr": "Perchloroethylene"
+    },
+    "CCO": {
+      "jp_abbr": "Ethyl alcohol"
+    },
+    "OCCNCCO": {
+      "jp_abbr": "Ethanolamine"
+    },
+    "C[S+](C)[O-]": {
+      "jp_abbr": "Dimethylsulfoxide, pure"
+    },
+    "CC(O)C(=O)O": {
+      "jp_abbr": "乳酸 Lactic acid"
+    },
+    "CC(=O)N(C)C": {
+      "jp_abbr": "Dimethyl acetamide"
+    },
+    "O=C(O)CC(O)C(=O)O": {
+      "jp_abbr": "りんご酸 Malic acid"
+    },
+    "OCC(O)CO": {
+      "jp_abbr": "Glycerol"
+    },
+    "CC(Cl)(Cl)Cl": {
+      "jp_abbr": "Trichloroethane"
+    },
+    "C#C": {
+      "jp_abbr": "アセチレン Acetylene"
+    },
+    "[C-]#N.[K+]": {
+      "jp_abbr": "青酸カリ Potassium cyanide"
+    },
+    "c1ccc(COCc2ccccc2)cc1": {
+      "jp_abbr": "Dibenzyl ether"
+    },
+    "C1CCOC1": {
+      "jp_abbr": "Tetrahydrofuran"
+    },
+    "OCCN(CCO)CCO": {
+      "jp_abbr": "Triethanol amine"
+    },
+    "CCOC(=O)CCCCCCCCC(=O)OCC": {
+      "jp_abbr": "ジエチルセバケート (DES) Diethyl sebacate (DES)"
+    },
+    "C=Cc1ccccc1": {
+      "jp_abbr": "Styrene"
+    },
+    "CCCCCC": {
+      "jp_abbr": "Hexane"
+    },
+    "CCc1ccccc1": {
+      "jp_abbr": "Ethyl benzene"
+    },
+    "CC(=O)c1ccc(Cl)cc1": {
+      "jp_abbr": "p-塩化フェナシル p-Chloroacetophenone"
+    },
+    "O=[N+]([O-])c1ccccc1": {
+      "jp_abbr": "Nitrobenzene"
+    },
+    "CCOCCO": {
+      "jp_abbr": "Cellosolve"
+    },
+    "CC(=O)c1ccccc1": {
+      "jp_abbr": "Acetophenone"
+    },
+    "CC(C)c1ccccc1": {
+      "jp_abbr": "Isopropyl benzene"
+    },
+    "C1CCCCC1": {
+      "jp_abbr": "Cyclohexane"
+    },
+    "O=Cc1ccco1": {
+      "jp_abbr": "Furfural"
+    },
+    "CCOC(=O)C(C)O": {
+      "jp_abbr": "Ethyl lactate"
+    },
+    "CCC(=O)CC": {
+      "jp_abbr": "Diethyl ketone"
+    },
+    "CCOC(=O)C(=O)OCC": {
+      "jp_abbr": "シュウ酸エチル Ethyl oxalate"
+    },
+    "CCOC(=O)CC(=O)OCC": {
+      "jp_abbr": "Diethyl malonate"
+    },
+    "CCCC(=O)OCC": {
+      "jp_abbr": "Ethyl butyrate"
+    },
+    "c1cc[nH]c1": {
+      "jp_abbr": "Pyrrole"
+    },
+    "CCOC(=O)CC#N": {
+      "jp_abbr": "Ethyl Cyanoacetate, pure"
+    },
+    "Clc1ccccc1": {
+      "jp_abbr": "Monochlorobenzene"
+    },
+    "O=C1CCCCC1": {
+      "jp_abbr": "Cyclohexanone"
+    },
+    "Brc1ccccc1": {
+      "jp_abbr": "Bromobenzene"
+    },
+    "Cc1cccc(Cl)c1": {
+      "jp_abbr": "Chlorotoluene"
+    },
+    "CC(=O)OC(C)=O": {
+      "jp_abbr": "無水酢酸 Acetic anhydride"
+    },
+    "CCCOC(C)=O": {
+      "jp_abbr": "Propyl acetate"
+    },
+    "CC(=O)OC(C)C": {
+      "jp_abbr": "Isopropyl acetate"
+    },
+    "CCCCC": {
+      "jp_abbr": "Pentane"
+    },
+    "CCOCCOC(C)=O": {
+      "jp_abbr": "Cellosolve acetate"
+    },
+    "CC(C)OC(C)C": {
+      "jp_abbr": "Isopropyl ether"
+    },
+    "CC(=O)CC(C)C": {
+      "jp_abbr": "Methyl isobutyl ketone"
+    },
+    "CCC[N+](=O)[O-]": {
+      "jp_abbr": "Nitropropane"
+    },
+    "CCCC(C)=O": {
+      "jp_abbr": "Methyl propyl ketone"
+    },
+    "COCCO": {
+      "jp_abbr": "Ethylene glycol monomethyl ether"
+    },
+    "C=CCO": {
+      "jp_abbr": "Allyl alcohol"
+    },
+    "C=CC#N": {
+      "jp_abbr": "Acrylonitrile"
+    },
+    "CCNCC": {
+      "jp_abbr": "Diethylamine"
+    },
+    "CCCC": {
+      "jp_abbr": "ブタン Butane"
+    },
+    "CCCCCl": {
+      "jp_abbr": "塩化ブチル Butyl Chloride"
+    },
+    "Clc1ccccc1Cl": {
+      "jp_abbr": "Dichlorobenzene"
+    },
+    "CCOC(=O)c1ccccc1": {
+      "jp_abbr": "Ethyl benzoate"
+    },
+    "C1CCC2CCCCC2C1": {
+      "jp_abbr": "Decahydronaphthalene"
+    },
+    "CC(=O)[O-].CC(=O)[O-].CC(=O)[O-].[Al+3]": {
+      "jp_abbr": "酢酸アルミニウム Aluminum acetate"
+    },
+    "CC(=O)OCc1ccccc1": {
+      "jp_abbr": "Benzyl acetate"
+    },
+    "CC1CO1": {
+      "jp_abbr": "Methyloxirane"
+    },
+    "C[N+](=O)[O-]": {
+      "jp_abbr": "Nitromethane"
+    },
+    "C=CC(=O)OCCCC": {
+      "jp_abbr": "Butyl acrylate"
+    },
+    "C=C(Cl)Cl": {
+      "jp_abbr": "Vinylidene chloride"
+    },
+    "CCOC(C)=O": {
+      "jp_abbr": "Ethyl acetate"
+    },
+    "C1CO1": {
+      "jp_abbr": "Ethylene Oxide, pure"
+    },
+    "NC(CO)(CO)CO": {
+      "jp_abbr": "Tris Buffer Solution, pH 11, pure"
+    },
+    "S=C=S": {
+      "jp_abbr": "Carbon disulfide"
+    },
+    "CCCCCCC": {
+      "jp_abbr": "n-heptane"
+    },
+    "CCS": {
+      "jp_abbr": "Ethyl mercaptan"
+    },
+    "CC#N": {
+      "jp_abbr": "Acetonitrile"
+    },
+    "CCCl": {
+      "jp_abbr": "塩化エチル Ethyl chloride"
+    },
+    "CCCCOCCCC": {
+      "jp_abbr": "Dibutyl ether"
+    },
+    "CCC": {
+      "jp_abbr": "プロパン Propane"
+    },
+    "[C-]#N.[Na+]": {
+      "jp_abbr": "シアン化ナトリウム Sodium cyanide"
+    },
+    "CCl": {
+      "jp_abbr": "塩化メチル Methyl chloride"
+    },
+    "ClCCl": {
+      "jp_abbr": "Methylene dichloride"
+    },
+    "O=CC=Cc1ccccc1": {
+      "jp_abbr": "3-Phenyl-2-propenal, pure"
+    },
+    "CCCCOC(=O)CC(O)(CC(=O)OCCCC)C(=O)OCCCC": {
+      "jp_abbr": "2-Hydroxy-1,2,3-PropanetricarboxylicAcid Tributyl Ester, pure"
+    },
+    "CCc1ccccc1CC": {
+      "jp_abbr": "Diethyl benzene"
+    },
+    "CCCCCCO": {
+      "jp_abbr": "Hexyl alcohol"
+    },
+    "O=Cc1ccccc1O": {
+      "jp_abbr": "Salicylaldehyde"
+    },
+    "O=[N+]([O-])c1cc([N+](=O)[O-])c(O)c([N+](=O)[O-])c1": {
+      "jp_abbr": "ピクリン酸 Picric acid"
+    },
+    "OCCOCCO": {
+      "jp_abbr": "Diethylene glycol"
+    },
+    "C=C(C)C(=O)OC": {
+      "jp_abbr": "Methyl methacrylate"
+    },
+    "CC[N+](=O)[O-]": {
+      "jp_abbr": "Nitroethane"
+    },
+    "CCOCCOCCO": {
+      "jp_abbr": "Carbitol"
+    },
+    "CC[Pb](CC)(CC)CC": {
+      "jp_abbr": "四エチル鉛 Tetraethyl lead"
+    },
+    "COC(C)=O": {
+      "jp_abbr": "Methyl acetate"
+    },
+    "ClC=C(Cl)Cl": {
+      "jp_abbr": "Trichloroethylene"
+    },
+    "CCCCCCCCCCCO": {
+      "jp_abbr": "Undecyl alcohol"
+    },
+    "CC(=O)CCl": {
+      "jp_abbr": "Chloroacetone"
+    },
+    "CCC(C)=O": {
+      "jp_abbr": "Methyl ethyl ketone"
+    },
+    "CCC(C)O": {
+      "jp_abbr": "ブタノール（二級） sec-Butanol"
+    },
+    "CCCCCCCCOC(=O)c1ccccc1C(=O)OCCCCCCCC": {
+      "jp_abbr": "Di-n-octyl phthalate"
+    },
+    "c1ccc2c(c1)CCCC2": {
+      "jp_abbr": "Tetralin"
+    },
+    "CC(C)CO": {
+      "jp_abbr": "Isobutyl alcohol"
+    },
+    "OCCOCCOCCO": {
+      "jp_abbr": "Triethylene glycol"
+    },
+    "CC(C)=O": {
+      "jp_abbr": "Acetone"
+    },
+    "CC(=O)[O-].CC(=O)[O-].[Pb+2]": {
+      "jp_abbr": "酢酸鉛 Lead acetate"
+    },
+    "OC1CCCCC1": {
+      "jp_abbr": "Cyclohexanol"
+    },
+    "CC(N)=O": {
+      "jp_abbr": "Acetamide"
+    },
+    "O=C(OCC1OC(OC(=O)c2cc(O)c(O)c(OC(=O)c3cc(O)c(O)c(O)c3)c2)C(OC(=O)c2cc(O)c(O)c(OC(=O)c3cc(O)c(O)c(O)c3)c2)C(OC(=O)c2cc(O)c(O)c(OC(=O)c3cc(O)c(O)c(O)c3)c2)C1OC(=O)c1cc(O)c(O)c(OC(=O)c2cc(O)c(O)c(O)c2)c1)c1cc(O)c(O)c(OC(=O)c2cc(O)c(O)c(O)c2)c1": {
+      "jp_abbr": "タンニン酸 Tannic acid"
+    },
+    "CCOCC1OC(OC)C(OCC)C(OCC)C1OC1OC(CO)C(OC)C(O)C1O": {
+      "jp_abbr": "エチルセルロース Ethyl cellulose"
+    },
+    "OCCO": {
+      "jp_abbr": "Ethylene glycol"
+    },
+    "CC(=O)O": {
+      "jp_abbr": "酢酸 Acetic acid 100RT"
+    },
+    "CCC1CCC(CCC(=O)O)C1": {
+      "jp_abbr": "ナフテン酸 Naphthenic acid"
+    },
+    "CCCCCOB(O)O": {
+      "jp_abbr": "ほう酸アミル Amyl borate"
+    },
+    "CC=O": {
+      "jp_abbr": "Acetaldehyde"
+    },
+    "OCCCl": {
+      "jp_abbr": "Ethylene chlorohydrin"
+    },
+    "Clc1ccc(Cl)c(Cl)c1": {
+      "jp_abbr": "1,2,4-trichlorbenzene"
+    },
+    "CCC=CCC=CCC=CCCCCCCCC(=O)OCC.CCCCCC=CCC=CCCCCCCCC(=O)OCC.CCCCCCCCC=CCCCCCCCC(=O)OCC.CCCCCCCCCCCCCCCC(=O)OCC.CCCCCCCCCCCCCCCCCC(=O)OCC": {
+      "jp_abbr": "オリーブ油 Olive oil"
+    },
+    "CCCCCC=CCC=CCCCCCCCC(=O)O": {
+      "jp_abbr": "リノレン酸 Linoleic acid"
+    },
+    "CCCCCCCCC=CCCCCCCCC(=O)OCCOC": {
+      "jp_abbr": "Methoxyethyl oleate"
+    },
+    "CCCCCCC(O)CC=CCCCCCCCC(=O)OCC(COC(=O)CCCCCCCC=CCC(O)CCCCCC)OC(=O)CCCCCCCC=CCC(O)CCCCCC": {
+      "jp_abbr": "ひまし油 castorOil"
+    },
+    "CC(=O)OCCC(C)C": {
+      "jp_abbr": "Amylacetate"
+    },
+    "c1ccccc#1": {
+      "jp_abbr": "Benzine"
+    },
+    "CCN(CC)CC": {
+      "jp_abbr": "Triethylamine"
+    },
+    "CCCCC(CC)COC(=O)c1ccccc1C(=O)OCC(CC)CCCC": {
+      "jp_abbr": "Dioctyl phthalate"
+    },
+    "CCCCCCCCCCCCCCCCCC(=O)OCCCC": {
+      "jp_abbr": "ステアリン酸ブチル Butyl stearate"
+    },
+    "CC(C)=CC(=O)C=C(C)C": {
+      "jp_abbr": "ホロン Phorone"
+    },
+    "CCOC(=O)CC(C)=O": {
+      "jp_abbr": "アセト酢酸エチル Ethyl acetoacetate"
+    },
+    "c1ccoc1": {
+      "jp_abbr": "Furan furfuran"
+    },
+    "ClCc1ccccc1": {
+      "jp_abbr": "塩化ベンジル Benzyl chloride"
+    },
+    "NNc1ccccc1": {
+      "jp_abbr": "フェニルヒドラジン Phenyl hydrazine"
+    },
+    "ClCC1CO1": {
+      "jp_abbr": "エピクロルヒドリン　Epichlorohydrin"
+    },
+    "O=C(OCc1ccccc1)c1ccccc1": {
+      "jp_abbr": "Benzyl benzoate"
+    },
+    "CCO[Si](OCC)(OCC)OCC": {
+      "jp_abbr": "ケイ酸エチル Ethyl silicate"
+    },
+    "C=CC": {
+      "jp_abbr": "プロピレン Propylene"
+    },
+    "FC(F)(Cl)Cl": {
+      "jp_abbr": "フレオン  Freon 12"
+    },
+    "FC(F)(Cl)C(F)(Cl)Cl": {
+      "jp_abbr": "フレオン  Freon 113("
+    },
+    "FC(F)(Cl)C(F)(F)Cl": {
+      "jp_abbr": ")_x000D_フレオン  Freon 114"
+    },
+    "CCCCOCCO": {
+      "jp_abbr": "Cellosolve butyl"
+    },
+    "FC(Cl)(Cl)Cl": {
+      "jp_abbr": "フレオン  Freon 11"
+    },
+    "C=CC(=O)OCC": {
+      "jp_abbr": "Ethyl acrylate"
+    },
+    "FC(Cl)Cl": {
+      "jp_abbr": "フレオン  Freon 21"
+    },
+    "Clc1cccc2ccccc12": {
+      "jp_abbr": "Chloronaphthalene"
+    },
+    "FC(F)Cl": {
+      "jp_abbr": "フレオン  Freon 22"
+    },
+    "BrCBr": {
+      "jp_abbr": "Bromine/dibromoethane"
+    },
+    "C=CC(=O)O": {
+      "jp_abbr": "Acrylic acid"
+    },
+    "CC(=O)OCC(COC(C)=O)OC(C)=O": {
+      "jp_abbr": "Triacetin"
+    },
+    "Cc1ccc(OP(=O)(Oc2ccc(C)cc2)Oc2ccc(C)cc2)cc1": {
+      "jp_abbr": "トリクレジルホスフェート (TCP) Tricresyl phosphate"
+    },
+    "c1ccc(Oc2ccccc2)cc1": {
+      "jp_abbr": "酸化ジフェニル Diphenyl oxide"
+    },
+    "CN(C)c1ccccc1": {
+      "jp_abbr": "Dimethyl aniline"
+    },
+    "CCCCOP(=O)(OCCCC)OCCCC": {
+      "jp_abbr": "Tributyl phosphate"
+    },
+    "CCCCOCCOP(=O)(OCCOCCCC)OCCOCCCC": {
+      "jp_abbr": "Tributoxy ethyl phosphate"
+    },
+    "C1CCNCC1": {
+      "jp_abbr": "ピペリジン Piperidine"
+    },
+    "c1ccc(-c2ccccc2)cc1": {
+      "jp_abbr": "ジフェニル Diphenyl"
+    },
+    "CC(C)CCCCCOP(OCCCCCC(C)C)OCCCCCC(C)C": {
+      "jp_abbr": "トリオクチルフォスフェート"
+    },
+    "CCCCCCCCC=CCCCCCCCC(=O)O": {
+      "jp_abbr": "Oleic acid"
+    },
+    "COC=O": {
+      "jp_abbr": "ぎ酸メチル"
+    },
+    "Cc1ccc(N=C=O)cc1N=C=O": {
+      "jp_abbr": "トルエンジイソシアネート(TDI)"
+    },
+    "CC(=O)Cl": {
+      "jp_abbr": "塩化アセチル"
+    },
+    "C=CC(=O)OC": {
+      "jp_abbr": "アクリル酸メチル"
+    },
+    "c1ccc(-c2ccccc2)cc1.c1ccc(Oc2ccccc2)cc1": {
+      "jp_abbr": "ダウサムA"
+    },
+    "FC(Cl)(Cl)C(F)(Cl)Cl": {
+      "jp_abbr": "フレオン112"
+    },
+    "CCCCCCCCCCCCCCCCCC": {
+      "jp_abbr": "オクタデカン"
+    },
+    "FC(F)(Br)C(F)(F)Br": {
+      "jp_abbr": "フレオン114B2"
+    },
+    "COC(=O)c1ccccc1O": {
+      "jp_abbr": "サリチル酸メチル Methylsalicylate"
+    },
+    "CC(=O)Br": {
+      "jp_abbr": "臭化アセチル"
+    },
+    "OCc1ccco1": {
+      "jp_abbr": "フルフリルアルコール"
+    },
+    "CC(=O)C(C)C": {
+      "jp_abbr": "メチルイソプロピルケトン"
+    },
+    "ClCBr": {
+      "jp_abbr": "クロロブロモメタン"
+    },
+    "CC(C)Cl": {
+      "jp_abbr": "イソプロピルクロライド"
+    }
+  }
+}

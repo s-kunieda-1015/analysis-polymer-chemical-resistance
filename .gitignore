@@ -11,6 +11,7 @@ __pycache__/
 # Data files (download from Zenodo)
 data/*
 !data/README.md
+!data/chemical_resistance_metadata.json
 
 # Output files (generated during execution)
 output/*

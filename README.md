@@ -1,10 +1,16 @@
-# Chemical Resistance Prediction Analysis
+# Machine Learning for Polymer Chemical Resistance to Organic Solvents
 
 This repository contains the code and analysis for predicting chemical resistance of polymer-solvent combinations using machine learning models.
 
 ## Paper Citation
 
-> [Paper citation will be added upon publication]
+> Shogo Kunieda, Mitsuru Yambe, Hiromori Murashima, Takeru Nakamura, Toshiaki Shintani, Hitoshi Kamijima, Yoshihiro Hayashi, Yosuke Hanawa, Ryo Yoshida. "Machine Learning for Polymer Chemical Resistance to Organic Solvents." arXiv:2509.05344 (2025).
+
+**arXiv**: [https://arxiv.org/abs/2509.05344](https://arxiv.org/abs/2509.05344)
+
+### Abstract
+
+Predicting the chemical resistance of polymers to organic solvents is a longstanding challenge in materials science, with significant implications for sustainable materials design and industrial applications. Here, we address the need for interpretable and generalizable frameworks to understand and predict polymer chemical resistance beyond conventional solubility models. We systematically analyze a large dataset of polymer solvent combinations using a data-driven approach. Our study reveals that polymer crystallinity and density, as well as solvent polarity, are key factors governing chemical resistance, and that these trends are consistent with established theoretical models. These findings provide a foundation for rational screening and design of polymer materials with tailored chemical resistance, advancing both fundamental understanding and practical applications.
 
 ## Repository Structure
 
@@ -12,7 +18,8 @@ This repository contains the code and analysis for predicting chemical resistanc
 analysis-polymer-chemical-resistance/
 ├── src/
 │   ├── main_analysis.py          # Main analysis script
-│   └── convert_to_notebook.py    # Script to convert .py to Jupyter notebook
+│   ├── main_analysis.ipynb       # Jupyter notebook (with execution results)
+│   └── convert_to_notebook.py    # Script to generate notebook from .py
 ├── utils/                        # Utility modules
 │   ├── config.py                 # Configuration and paths
 │   ├── data_preprocessing.py     # Data loading functions
@@ -37,7 +44,7 @@ analysis-polymer-chemical-resistance/
 
 The datasets required for this analysis are available on Zenodo:
 
-**DOI**: [DOI will be added upon publication]
+**Zenodo DOI**: [DOI will be added upon data publication]
 
 Download the following files and place them in the `data/` directory:
 
@@ -47,6 +54,10 @@ Download the following files and place them in the `data/` directory:
 | `chemical_resistance_metadata.json` | Metadata including name mappings | ~68 KB |
 | `polymer_mpk_dataset.csv` | Virtual polymer dataset (40971 records) | ~285 MB |
 | `pe_solvent_dataset.csv` | PE solvent dataset (9828 records) | ~65 MB |
+
+> **Note**: The `polymer_mpk_dataset.csv` is based on the [PolyOmics](https://huggingface.co/datasets/yhayashi1986/PolyOmics) dataset. See the related paper: [arXiv:2511.11626](https://arxiv.org/abs/2511.11626).
+
+> **Note**: The solvent SMILES data in `pe_solvent_dataset.csv` is derived from [HSPiP (Hansen Solubility Parameters in Practice)](https://www.pirika.com/wp/chemistry-at-pirika-com/hsp/how2buy). The HSP values themselves are not used in this study.
 
 ## Installation
 
@@ -59,7 +70,7 @@ Download the following files and place them in the `data/` directory:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/[username]/analysis-polymer-chemical-resistance.git
+git clone https://github.com/s-kunieda-1015/analysis-polymer-chemical-resistance.git
 cd analysis-polymer-chemical-resistance
 ```
 
@@ -147,6 +158,10 @@ Three machine learning models are trained:
 | Chi Parameter | XGBoost | Predict chi interaction parameter |
 
 Pre-trained models are saved in `output/Model/` after the first execution.
+
+## Acknowledgments
+
+- The notebook conversion script (`convert_to_notebook.py`) was developed with reference to [nb2py](https://github.com/tactical-k/nb2py).
 
 ## License
 

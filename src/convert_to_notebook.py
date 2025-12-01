@@ -2,6 +2,10 @@
 """
 Convert main_analysis.py to a well-structured Jupyter notebook.
 This script creates proper section headers and organizes cells logically.
+
+Reference:
+    This script was developed with reference to nb2py.
+    https://github.com/tactical-k/nb2py
 """
 
 import nbformat

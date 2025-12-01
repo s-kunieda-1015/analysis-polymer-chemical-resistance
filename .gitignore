@@ -8,20 +8,12 @@ __pycache__/
 *.so
 
 # Data files (download from Zenodo)
-data/
+data/*
+!data/README.md
 
 # Output files (generated during execution)
-output/**/*.csv
-output/**/*.xlsx
-output/**/*.pkl
-output/**/*.jpg
-output/**/*.png
-output/**/*.svg
-output/**/*.pdf
-
-# Keep directory structure
-!output/.gitkeep
-!output/*/.gitkeep
+output/*
+!output/README.md
 
 # OS files
 .DS_Store

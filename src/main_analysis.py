@@ -40,7 +40,6 @@ N_JOBS = args.n_jobs                            # Number of parallel jobs for LO
 import os
 import sys
 import json
-import csv
 import re
 import math
 import argparse
@@ -679,11 +678,6 @@ log_str_dict = {
     15:"FF_CL_RP_Chi",
 }
 
-with open("radonpy_col_check.csv", "w", newline='', encoding="utf-8") as f:
-    writer = csv.writer(f)
-    writer.writerow(radonpy_polymer_cols)  # Write in one line
-
-radonpy_polymer_cols
 
 # # Add other indicators
 
@@ -931,8 +925,7 @@ def _get_resistance_binary_values(
 ) -> pd.DataFrame:
     key_samples = info.drop_duplicates(subset=key_col)
     keys: list[str] = key_samples[key_col].tolist()
-    
-        ticklabels = [smiles_name_dict[key]["jp_abbr"] for key in keys]
+    ticklabels = [smiles_name_dict[key]["jp_abbr"] for key in keys]
 
     counts = pd.DataFrame(
         {

@@ -1649,7 +1649,7 @@ def generate_figure5_resistance_prediction(
         "crystalinity_binary": "Crystallinity",
         "density": "Density",
         "rg": "Radius of gyration (Rg)",
-        "scaled rg": "Scaled radius of gyration",
+        "scaled_rg": "Scaled Rg",
         "self-diffusion": "Self-diffusion coefficient",
         "cp": "Heat capacity at constant pressure (Cp)",
         "cv": "Heat capacity at constant volume (Cv)",

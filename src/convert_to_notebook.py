@@ -1468,6 +1468,8 @@ def load_and_filter(filepath):
     df = pd.read_csv(filepath)
     df = df[~df['feature'].str.startswith('FF_')].copy()
     df['feature_clean'] = df['feature'].str.replace('_radonpy_polymer', '', regex=False)
+    # Apply label formatting for display
+    df['feature_clean'] = df['feature_clean'].replace('Scaled_Rg', 'Scaled Rg')
     return df
 
 df_all = load_and_filter(filepath_all)

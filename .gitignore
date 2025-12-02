@@ -1,6 +1,6 @@
 # Jupyter Notebooks (generated from .py scripts)
-*.ipynb
-!src/main_analysis.ipynb
+# *.ipynb
+# !src/main_analysis.ipynb
 
 # Python cache
 __pycache__/

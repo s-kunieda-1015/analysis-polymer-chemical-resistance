@@ -271,7 +271,7 @@ average_df.reset_index(inplace=True)
 _df_polymer_mpk = data_preprocessing.load_polymer_mpk_dataset()
 _df_pe_solvent = data_preprocessing.load_pe_solvent_dataset()
 print(f"✓ polymer_mpk_dataset loaded: {len(_df_polymer_mpk)} records")
-print(f"✓ pe_solvent_dataset loaded: {len(_df_pe_solvent)} records")""")))
+print(f"✓ pe_solvent_dataset loaded: {len(_df_pe_solvent)} records")"""))
 
     # =========================================================================
     # SECTION 4: Exploratory Data Analysis

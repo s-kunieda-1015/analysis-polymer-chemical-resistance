@@ -53,12 +53,17 @@ Download the following files and place them in the `data/` directory:
 | File | Description | Size |
 |------|-------------|------|
 | `chemical_resistance_dataset.csv` | Main experimental dataset (2231 records) | 21.02 MB |
-| `polymer_mpk_dataset.csv` | Virtual polymer dataset (40971 records) | 298.99 MB |
 | `pe_solvent_dataset.csv` | PE solvent dataset (9828 records) | 68.12 MB |
+| `polymer_mpk_dataset.csv` | Virtual polymer dataset without RadonPy columns (40971 records) | - |
+| `general_polymers_with_sp_abbe_dynamic-dielectric.csv` | General polymer properties (Source from [PolyOmics](https://huggingface.co/datasets/yhayashi1986/PolyOmics) data) | - |
 
 > **Note**: `chemical_resistance_metadata.json` (metadata including name mappings) is already included in this repository.
 
-> **Note**: The `polymer_mpk_dataset.csv` is based on the [PolyOmics](https://huggingface.co/datasets/yhayashi1986/PolyOmics) dataset. See the related paper: [arXiv:2511.11626](https://arxiv.org/abs/2511.11626).
+> **Note**: `polymer_mpk_dataset.csv` and `general_polymers_with_sp_abbe_dynamic-dielectric.csv` are joined at runtime to restore the RadonPy columns (`_radonpy_polymer`). The join is performed using the `smiles_polymer` column (with `[*]` converted to `*`) matched against the `smiles_list` column. Rows that cannot be matched are dropped since they lack the required RadonPy data for prediction.
+
+> **Note**: The `general_polymers_with_sp_abbe_dynamic-dielectric.csv` file is available from the [PolyOmics dataset on Hugging Face](https://huggingface.co/datasets/yhayashi1986/PolyOmics). Download and place it in the `data/` directory.
+
+> **Note**: The `polymer_mpk_dataset.csv` is derived from the [PolyOmics](https://huggingface.co/datasets/yhayashi1986/PolyOmics) dataset (see related paper: [arXiv:2511.11626](https://arxiv.org/abs/2511.11626)). This file contains virtual polymers with no missing values for the physical properties used in chemical resistance prediction, with descriptors pre-calculated. Note that this file does not include the property values from PolyOmics; those are restored at runtime by joining with `general_polymers_with_sp_abbe_dynamic-dielectric.csv`.
 
 > **Note**: The solvent SMILES data in `pe_solvent_dataset.csv` is derived from [HSPiP (Hansen Solubility Parameters in Practice)](https://www.pirika.com/wp/chemistry-at-pirika-com/hsp/how2buy). The HSP values themselves are not used in this study.
 

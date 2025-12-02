@@ -1426,7 +1426,7 @@ def generate_figure3_combined(
 
 def generate_figure4_mic_and_rg(
     mic_csv_path: str,
-    df_acetone_vPolymer: pd.DataFrame,
+    df_MPK_vPolymer: pd.DataFrame,
     save_dir: str = None,
     base_fontsize: int = 12
 ) -> Figure:
@@ -1441,7 +1441,7 @@ def generate_figure4_mic_and_rg(
     ----------
     mic_csv_path : str
         Path to CSV file containing MIC scores
-    df_acetone_vPolymer : pd.DataFrame
+    df_MPK_vPolymer : pd.DataFrame
         DataFrame containing acetone-polymer data with Rg and crystallinity info
     save_dir : str, optional
         Directory to save the figure (SVG and PDF formats)
@@ -1507,8 +1507,8 @@ def generate_figure4_mic_and_rg(
     binary_col = "crystalinity_binary"
     
     # Extract data
-    chi = df_acetone_vPolymer[chi_col]
-    binary = df_acetone_vPolymer[binary_col]
+    chi = df_MPK_vPolymer[chi_col]
+    binary = df_MPK_vPolymer[binary_col]
     
     # Split data by binary label
     chi_0 = chi[binary == 0]
@@ -1767,7 +1767,7 @@ def generate_figure5_resistance_prediction(
 
 
 def generate_figure6_crystallinity_effect(
-    df_acetone_vPolymer: pd.DataFrame,
+    df_MPK_vPolymer: pd.DataFrame,
     x_col: str = "density_radonpy_polymer",
     y_col: str = "resistance_pred",
     save_dir: str = None,
@@ -1782,7 +1782,7 @@ def generate_figure6_crystallinity_effect(
     
     Parameters
     ----------
-    df_acetone_vPolymer : pd.DataFrame
+    df_MPK_vPolymer : pd.DataFrame
         DataFrame containing acetone-polymer data with density, resistance prediction,
         and crystallinity information
     x_col : str, optional
@@ -1808,8 +1808,8 @@ def generate_figure6_crystallinity_effect(
     tick_fontsize = base_fontsize * 0.45
     
     # Data splitting: amorphous (0) and crystalline (1)
-    df_noncrystal = df_acetone_vPolymer[df_acetone_vPolymer["crystalinity_binary"] == 0]
-    df_crystal = df_acetone_vPolymer[df_acetone_vPolymer["crystalinity_binary"] == 1]
+    df_noncrystal = df_MPK_vPolymer[df_MPK_vPolymer["crystalinity_binary"] == 0]
+    df_crystal = df_MPK_vPolymer[df_MPK_vPolymer["crystalinity_binary"] == 1]
     
     # Bin settings for histograms
     x_bins = np.linspace(0.8, 1.5, 21)

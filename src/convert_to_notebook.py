@@ -266,19 +266,12 @@ average_df.reset_index(inplace=True)
 
     cells.append(new_markdown_cell("""### 2.3 Load Additional Datasets"""))
 
-    cells.append(new_code_cell("""# Try to load polymer_mpk and pe_solvent datasets if available
-try:
-    _df_polymer_mpk = data_preprocessing.load_polymer_mpk_dataset()
-    _df_pe_solvent = data_preprocessing.load_pe_solvent_dataset()
-    _POLYMER_MPK_LOADED = True
-    _PE_SOLVENT_LOADED = True
-    print(f"✓ polymer_mpk_dataset loaded: {len(_df_polymer_mpk)} records")
-    print(f"✓ pe_solvent_dataset loaded: {len(_df_pe_solvent)} records")
-except FileNotFoundError:
-    _POLYMER_MPK_LOADED = False
-    _PE_SOLVENT_LOADED = False
-    print("Note: polymer_mpk and pe_solvent datasets not found in processed dir.")
-    print("      These will be loaded from original files.")"""))
+    cells.append(new_code_cell("""# Load polymer_mpk and pe_solvent datasets
+# polymer_mpk is loaded by joining polymer_mpk_dataset.csv with general_polymers_with_sp_abbe_dynamic-dielectric.csv
+_df_polymer_mpk = data_preprocessing.load_polymer_mpk_dataset()
+_df_pe_solvent = data_preprocessing.load_pe_solvent_dataset()
+print(f"✓ polymer_mpk_dataset loaded: {len(_df_polymer_mpk)} records")
+print(f"✓ pe_solvent_dataset loaded: {len(_df_pe_solvent)} records")""")))
 
     # =========================================================================
     # SECTION 4: Exploratory Data Analysis
@@ -1197,24 +1190,21 @@ model_path = os.path.join(MODEL_DIR, "crystallinity_model.pkl")
 model = train.load_model(model_path)
 print("✅ Model loaded successfully!")
 
-if _POLYMER_MPK_LOADED:
-    df_acetone_vPolymer = _df_polymer_mpk.copy()
-    print("✓ Using preprocessed polymer_mpk_dataset")
-else:
-    df_acetone_vPolymer = pd.read_csv(DATA_DIR / "vPolymer_vSolvent" / "MPK_vPolymer_40971_data.csv", index_col=0)
+df_MPK_vPolymer = _df_polymer_mpk.copy()
+print("✓ Using polymer_mpk_dataset")
 
-rename_cols = {col: col.replace("_resin", "_polymer") for col in df_acetone_vPolymer.columns if "_resin" in col}
-df_acetone_vPolymer = df_acetone_vPolymer.rename(columns=rename_cols)
-df_acetone_vPolymer["crystalinity_binary"] = model.predict(df_acetone_vPolymer[CL_explanatory_cols])
-df_acetone_vPolymer["crystalinity_prob"] = model.predict_proba(df_acetone_vPolymer[CL_explanatory_cols])[:,1]
-df_acetone_vPolymer.value_counts("crystalinity_binary")"""))
+rename_cols = {col: col.replace("_resin", "_polymer") for col in df_MPK_vPolymer.columns if "_resin" in col}
+df_MPK_vPolymer = df_MPK_vPolymer.rename(columns=rename_cols)
+df_MPK_vPolymer["crystalinity_binary"] = model.predict(df_MPK_vPolymer[CL_explanatory_cols])
+df_MPK_vPolymer["crystalinity_prob"] = model.predict_proba(df_MPK_vPolymer[CL_explanatory_cols])[:,1]
+df_MPK_vPolymer.value_counts("crystalinity_binary")"""))
 
     cells.append(new_code_cell("""# MIC for Figure 4: Crystallinity prediction model
 dir_name = os.path.join(REPORT_DIR_SUB, "cl_model", "analysis_MIC")
 os.makedirs(dir_name, exist_ok=True)
 filename = "mic_analysis_cl.jpg"
-X_cl = df_acetone_vPolymer[CL_explanatory_cols].copy()
-y_cl = df_acetone_vPolymer["crystalinity_prob"].copy()
+X_cl = df_MPK_vPolymer[CL_explanatory_cols].copy()
+y_cl = df_MPK_vPolymer["crystalinity_prob"].copy()
 _ = mic.calculate_and_save_mic(
     model, X_cl, y_cl,
     dir_name=dir_name, top_n=20,
@@ -1227,7 +1217,7 @@ _ = mic.calculate_and_save_mic(
 mic_csv_path = os.path.join(REPORT_DIR_SUB, "cl_model", "analysis_MIC", "mic_analysis_cl_mic_scores.csv")
 fig4 = plotting.generate_figure4_mic_and_rg(
     mic_csv_path=mic_csv_path,
-    df_acetone_vPolymer=df_acetone_vPolymer,
+    df_MPK_vPolymer=df_MPK_vPolymer,
     save_dir=REPORT_DIR_MAIN,
     base_fontsize=12
 )
@@ -1244,15 +1234,14 @@ plt.show()"""))
     cells.append(new_code_cell("""# Load Polyethylene and Virtual Solvent Data
 model_path = os.path.join(MODEL_DIR, "chi_parameter_model.pkl")
 final_model = load(model_path)
+print("✅ Chi model loaded successfully!")
 
 chi_explanatory_cols = FF_solvent_cols + FF_polymer_cols + radonpy_polymer_cols
 exclude_cols = ['n_atom_radonpy_polymer', 'mol_weight_radonpy_polymer']
 chi_explanatory_cols = [col for col in chi_explanatory_cols if col not in exclude_cols]
 
-if _PE_SOLVENT_LOADED:
-    df_PE_vSolv = _df_pe_solvent.copy()
-else:
-    df_PE_vSolv = pd.read_csv(DATA_DIR / "vPolymer_vSolvent" / "PE_vsolv_9828_data.csv", index_col=0)
+df_PE_vSolv = _df_pe_solvent.copy()
+print("✓ Using pe_solvent_dataset")
 
 rename_cols = {col: col.replace("_resin", "_polymer") for col in df_PE_vSolv.columns if "_resin" in col}
 df_PE_vSolv = df_PE_vSolv.rename(columns=rename_cols)
@@ -1417,10 +1406,10 @@ features_list = list(all_features_combinations[feature_No])
 exclude_cols = ['n_atom_radonpy_polymer', 'mol_weight_radonpy_polymer']
 features_list = [col for col in features_list if col not in exclude_cols]
 
-if "chi" not in df_acetone_vPolymer.columns:
-    df_acetone_vPolymer["chi"] = final_model.predict(df_acetone_vPolymer[chi_explanatory_cols])
+if "chi" not in df_MPK_vPolymer.columns:
+    df_MPK_vPolymer["chi"] = final_model.predict(df_MPK_vPolymer[chi_explanatory_cols])
 
-X_vpolymer = df_acetone_vPolymer[features_list].copy()
+X_vpolymer = df_MPK_vPolymer[features_list].copy()
 y_resistance = gbdt_model.predict_proba(X_vpolymer)[:, 1]
 
 print(f"  Dataset size: {len(X_vpolymer)}, Features: {len(features_list)}")
@@ -1434,7 +1423,7 @@ mic.calculate_and_save_mic(
 )
 
 # Calculate MIC for crystalline data
-mask_crystal = df_acetone_vPolymer["crystalinity_binary"] == 1
+mask_crystal = df_MPK_vPolymer["crystalinity_binary"] == 1
 X_crystal = X_vpolymer[mask_crystal].copy()
 y_crystal = pd.Series(y_resistance[mask_crystal])
 print(f"  - Calculating MIC for crystalline data (n={len(X_crystal)})...")
@@ -1445,7 +1434,7 @@ mic.calculate_and_save_mic(
 )
 
 # Calculate MIC for amorphous data
-mask_amorph = df_acetone_vPolymer["crystalinity_binary"] == 0
+mask_amorph = df_MPK_vPolymer["crystalinity_binary"] == 0
 X_amorph = X_vpolymer[mask_amorph].copy()
 y_amorph = pd.Series(y_resistance[mask_amorph])
 print(f"  - Calculating MIC for amorphous data (n={len(X_amorph)})...")
@@ -1477,16 +1466,16 @@ df_crystal = load_and_filter(filepath_crystal)
 df_noncrystal = load_and_filter(filepath_noncrystal)
 
 # Prepare prediction data
-df_acetone_vPolymer["crystalinity_binary"] = model.predict(df_acetone_vPolymer[CL_explanatory_cols])
-df_acetone_vPolymer["crystalinity_prob"] = model.predict_proba(df_acetone_vPolymer[CL_explanatory_cols])[:,1]
-df_acetone_vPolymer["chi"] = final_model.predict(df_acetone_vPolymer[chi_explanatory_cols])
-df_acetone_vPolymer["resistance_pred"] = gbdt_model.predict_proba(df_acetone_vPolymer[features])[:, 1]
+df_MPK_vPolymer["crystalinity_binary"] = model.predict(df_MPK_vPolymer[CL_explanatory_cols])
+df_MPK_vPolymer["crystalinity_prob"] = model.predict_proba(df_MPK_vPolymer[CL_explanatory_cols])[:,1]
+df_MPK_vPolymer["chi"] = final_model.predict(df_MPK_vPolymer[chi_explanatory_cols])
+df_MPK_vPolymer["resistance_pred"] = gbdt_model.predict_proba(df_MPK_vPolymer[features])[:, 1]
 
 plt.rcParams.update({'font.size': 24})
 features_list = list(all_features_combinations[feature_No])
 exclude_cols = ['n_atom_radonpy_polymer', 'mol_weight_radonpy_polymer']
 features_list = [col for col in features_list if col not in exclude_cols]
-train_data = df_acetone_vPolymer.copy()[features_list]
+train_data = df_MPK_vPolymer.copy()[features_list]
 X_train_exp = train_data[features_list]
 train_data["resistance_pred"] = gbdt_model.predict_proba(X_train_exp)[:, 1]
 CL_label = train_data["crystalinity_binary"]
@@ -1511,7 +1500,7 @@ plt.show()"""))
 
     cells.append(new_code_cell("""# FIGURE 6: Crystallinity Effect on Resistance
 fig6 = plotting.generate_figure6_crystallinity_effect(
-    df_acetone_vPolymer=df_acetone_vPolymer,
+    df_MPK_vPolymer=df_MPK_vPolymer,
     x_col="density_radonpy_polymer",
     y_col="resistance_pred",
     save_dir=REPORT_DIR_MAIN,

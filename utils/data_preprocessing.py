@@ -58,6 +58,71 @@ RADONPY_POLYMER_COLS: List[str] = [
     "refractive_index_radonpy_polymer",
 ]
 
+# RadonPy columns for joining polymer_mpk_dataset_r with general_polymers
+# These columns were removed from polymer_mpk_dataset_r.csv and need to be
+# restored from general_polymers_with_sp_abbe_dynamic-dielectric.csv
+RADONPY_COLUMNS_FOR_JOIN: List[str] = [
+    "n_mol_radonpy_polymer",
+    "qm_polarizability_xy_monomer1_radonpy_polymer",
+    "linear_expansion_radonpy_polymer",
+    "qm_dipole_x_monomer1_radonpy_polymer",
+    "tg_cooling_rate_radonpy_polymer",
+    "Cp_radonpy_polymer",
+    "tg_max_temp_radonpy_polymer",
+    "vdw_volume_monomer1_radonpy_polymer",
+    "tg_interval_temp_radonpy_polymer",
+    "qm_polarizability_xz_monomer1_radonpy_polymer",
+    "n_atom_radonpy_polymer",
+    "tg_init_density_radonpy_polymer",
+    "qm_dipole_y_monomer1_radonpy_polymer",
+    "density_radonpy_polymer",
+    "isentropic_bulk_modulus_radonpy_polymer",
+    "r2_radonpy_polymer",
+    "tg_next_temp_radonpy_polymer",
+    "static_dielectric_const_radonpy_polymer",
+    "qm_lumo_monomer1_radonpy_polymer",
+    "Mn_radonpy_polymer",
+    "thermal_conductivity_radonpy_polymer",
+    "thermal_diffusivity_radonpy_polymer",
+    "TC_pair_radonpy_polymer",
+    "dielectric_const_dc_radonpy_polymer",
+    "nematic_order_parameter_radonpy_polymer",
+    "Mw_radonpy_polymer",
+    "qm_polarizability_xx_monomer1_radonpy_polymer",
+    "tg_radonpy_polymer",
+    "volume_expansion_radonpy_polymer",
+    "mol_weight_monomer1_radonpy_polymer",
+    "TC_bond_radonpy_polymer",
+    "TC_dihed_radonpy_polymer",
+    "qm_polarizability_monomer1_radonpy_polymer",
+    "self-diffusion_radonpy_polymer",
+    "refractive_index_radonpy_polymer",
+    "TC_fix_radonpy_polymer",
+    "n_atom_mean_radonpy_polymer",
+    "qm_dipole_z_monomer1_radonpy_polymer",
+    "qm_polarizability_zz_monomer1_radonpy_polymer",
+    "qm_homo_monomer1_radonpy_polymer",
+    "mol_weight_radonpy_polymer",
+    "qm_total_energy_monomer1_radonpy_polymer",
+    "n_atom_var_radonpy_polymer",
+    "isentropic_compressibility_radonpy_polymer",
+    "Rg_radonpy_polymer",
+    "Cv_radonpy_polymer",
+    "tg_min_temp_radonpy_polymer",
+    "compressibility_radonpy_polymer",
+    "TC_kspace_radonpy_polymer",
+    "qm_polarizability_yz_monomer1_radonpy_polymer",
+    "DP_radonpy_polymer",
+    "TC_improper_radonpy_polymer",
+    "qm_polarizability_yy_monomer1_radonpy_polymer",
+    "TC_pe_radonpy_polymer",
+    "TC_ke_radonpy_polymer",
+    "bulk_modulus_radonpy_polymer",
+    "tg_rmse_radonpy_polymer",
+    "TC_angle_radonpy_polymer",
+    "Scaled_Rg_radonpy_polymer",
+]
+
 # Polymers to exclude (only one class)
 POLYMERS_TO_EXCLUDE: List[str] = ["PVAc", "CA"]
 
@@ -990,7 +1055,15 @@ def save_polymer_mpk_dataset(df: pd.DataFrame, save_dir: Optional[Path] = None) 
 
 def load_polymer_mpk_dataset(load_dir: Optional[Path] = None) -> pd.DataFrame:
     """
-    Load the processed polymer MPK dataset.
+    Load the polymer MPK dataset by joining polymer_mpk_dataset_r.csv with
+    general_polymers_with_sp_abbe_dynamic-dielectric.csv.
+    
+    This function:
+    1. Loads polymer_mpk_dataset_r.csv (without RadonPy columns)
+    2. Loads general_polymers_with_sp_abbe_dynamic-dielectric.csv
+    3. Converts [*] to * in smiles_polymer for matching
+    4. Inner joins on smiles_polymer_key = smiles_list
+    5. Adds _radonpy_polymer suffix to matched columns
     
     Parameters
     ----------
@@ -1000,15 +1073,85 @@ def load_polymer_mpk_dataset(load_dir: Optional[Path] = None) -> pd.DataFrame:
     Returns
     -------
     pd.DataFrame
-        Polymer MPK data
+        Polymer MPK data with RadonPy columns restored
     """
     if load_dir is None:
         load_dir = PROCESSED_DATA_DIR
     
-    load_path = Path(load_dir) / "polymer_mpk_dataset.csv"
-    df = pd.read_csv(load_path, index_col=0)
-    print(f"✓ Loaded polymer_mpk_dataset.csv: {len(df)} rows")
-    return df
+    load_dir = Path(load_dir)
+    
+    # Load polymer_mpk_dataset.csv (without RadonPy columns)
+    polymer_path = load_dir / "polymer_mpk_dataset.csv"
+    df_polymer = pd.read_csv(polymer_path, index_col=0)
+    print(f"✓ Loaded polymer_mpk_dataset.csv: {len(df_polymer)} rows, {len(df_polymer.columns)} columns")
+    
+    # Load general_polymers_with_sp_abbe_dynamic-dielectric.csv
+    general_path = load_dir / "general_polymers_with_sp_abbe_dynamic-dielectric.csv"
+    df_general = pd.read_csv(general_path)
+    print(f"✓ Loaded general_polymers: {len(df_general)} rows, {len(df_general.columns)} columns")
+    
+    # Normalize column names: replace spaces with underscores to match expected column names
+    df_general.columns = df_general.columns.str.replace(" ", "_")
+    
+    # Create join key: convert [*] to * in smiles_polymer
+    df_polymer["smiles_polymer_key"] = df_polymer["smiles_polymer"].str.replace(
+        r"\[\*\]", "*", regex=True
+    )
+    
+    # Determine which RadonPy columns can be matched (use RADONPY_POLYMER_COLS - the subset actually needed)
+    suffix = "_radonpy_polymer"
+    base_column_names = [col.replace(suffix, "") for col in RADONPY_POLYMER_COLS]
+    matching_columns = [col for col in base_column_names if col in df_general.columns]
+    missing_columns = [col for col in base_column_names if col not in df_general.columns]
+    
+    print(f"  Matching RadonPy columns in general_polymers: {len(matching_columns)}")
+    if missing_columns:
+        print(f"  Missing columns (not in general_polymers): {len(missing_columns)}")
+    
+    # Extract only the matching columns from general_polymers + smiles_list for join
+    columns_to_select = ["smiles_list"] + matching_columns
+    df_general_subset = df_general[columns_to_select].copy()
+    
+    # Rename columns to add _radonpy_polymer suffix
+    rename_dict = {col: col + suffix for col in matching_columns}
+    df_general_subset = df_general_subset.rename(columns=rename_dict)
+    
+    # 1. Left join on smiles_polymer_key = smiles_list
+    print("  Step 1: Joining data...")
+    df_merged = pd.merge(
+        df_polymer,
+        df_general_subset,
+        left_on="smiles_polymer_key",
+        right_on="smiles_list",
+        how="left"
+    )
+    print(f"    After join: {len(df_merged)} rows")
+    
+    # 2. Drop rows with NaN in the 17 RadonPy columns
+    print("  Step 2: Removing rows with NaN in RadonPy columns...")
+    radonpy_cols_in_merged = [col for col in RADONPY_POLYMER_COLS if col in df_merged.columns]
+    n_before = len(df_merged)
+    df_merged = df_merged.dropna(subset=radonpy_cols_in_merged)
+    n_after = len(df_merged)
+    if n_before != n_after:
+        print(f"    Dropped {n_before - n_after} rows with NaN values")
+    print(f"    After NaN removal: {len(df_merged)} rows")
+    
+    # 3. Remove duplicates
+    print("  Step 3: Removing duplicates...")
+    n_before = len(df_merged)
+    df_merged = df_merged.drop_duplicates(subset=["smiles_polymer_key"], keep="first")
+    n_after = len(df_merged)
+    if n_before != n_after:
+        print(f"    Removed {n_before - n_after} duplicate rows")
+    print(f"    After duplicate removal: {len(df_merged)} rows")
+    
+    # Remove temporary join columns
+    df_merged = df_merged.drop(columns=["smiles_polymer_key", "smiles_list"])
+    
+    print(f"✓ Joined polymer_mpk_dataset: {len(df_merged)} rows, {len(df_merged.columns)} columns")
+    
+    return df_merged
 
 
 # =============================================================================

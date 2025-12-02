@@ -14,7 +14,10 @@ The following files should be downloaded and placed in this directory:
 
 - `chemical_resistance_dataset.csv` - Main chemical resistance experimental data
 - `pe_solvent_dataset.csv` - Polyethylene virtual solvent dataset
-- `polymer_mpk_dataset.csv` - Virtual polymer dataset with MPK solvent
+- `polymer_mpk_dataset.csv` - Virtual polymer dataset (without RadonPy columns)
+- `general_polymers_with_sp_abbe_dynamic-dielectric.csv` - General polymer properties (source for RadonPy MD data)
+
+> **Note**: `polymer_mpk_dataset.csv` and `general_polymers_with_sp_abbe_dynamic-dielectric.csv` are joined at runtime to restore the RadonPy columns (`_radonpy_polymer`). The join is performed using the `smiles_polymer` column (with `[*]` converted to `*`) matched against the `smiles_list` column.
 
 ### Dataset View Subdirectory
 
@@ -25,6 +28,10 @@ The `dataset_view/` subdirectory contains formatted versions for easier viewing.
 ### polymer_mpk_dataset.csv
 This dataset is based on the [PolyOmics](https://huggingface.co/datasets/yhayashi1986/PolyOmics) dataset.
 See the related paper: [arXiv:2511.11626](https://arxiv.org/abs/2511.11626)
+
+### general_polymers_with_sp_abbe_dynamic-dielectric.csv
+This dataset contains RadonPy MD simulation results for general polymers.
+It is used to restore the RadonPy property columns (`_radonpy_polymer`) when loading the polymer_mpk_dataset.
 
 ### pe_solvent_dataset.csv
 The solvent SMILES data is derived from [HSPiP (Hansen Solubility Parameters in Practice)](https://www.pirika.com/wp/chemistry-at-pirika-com/hsp/how2buy).

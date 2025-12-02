@@ -172,5 +172,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-[Contact information will be added]
+Shogo Kunieda - kuniedascreen@gmail.com
 

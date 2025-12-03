@@ -714,8 +714,8 @@ def draw_binary_distribution(
         title_size = 16
         tick_size = 12
     
-    ax.set_xlabel("Resistance Binary Distribution", fontsize=label_size)
-    ax.set_title("Resistance Binary Distribution", fontsize=title_size)
+    ax.set_xlabel("Distribution of chemical resistance in dataset (Ground Truth)", fontsize=label_size)
+    ax.set_title("Chemical resistance distribution for polymer", fontsize=title_size)
     ax.tick_params(axis='both', which='major', labelsize=tick_size)
 
     return binary_ticklabels
@@ -801,8 +801,8 @@ def draw_percentage_distribution(
         title_size = 16
         tick_size = 12
     
-    ax.set_xlabel("Resistance Percentage Distribution", fontsize=label_size)
-    ax.set_title("Resistance Percentage Distribution", fontsize=title_size)
+    ax.set_xlabel("Distribution of chemical resistance in dataset (Ground Truth)", fontsize=label_size)
+    ax.set_title("Chemical resistance distribution for solvent", fontsize=title_size)
     ax.tick_params(axis='both', which='major', labelsize=tick_size)
 
 
@@ -1896,7 +1896,7 @@ def generate_figure6_crystallinity_effect(
         cmap='inferno',
         norm=norm_noncrystal
     )
-    ax_main_noncrystal.set_xlabel("Density", fontsize=label_fontsize)
+    ax_main_noncrystal.set_xlabel("Polymer density (MD)", fontsize=label_fontsize)
     ax_main_noncrystal.set_ylabel("Predicted non-resistance probability", fontsize=label_fontsize)
     ax_main_noncrystal.set_xlim(0.8, 1.5)
     ax_main_noncrystal.set_ylim(y_bins[0], y_bins[-1])
@@ -1917,7 +1917,7 @@ def generate_figure6_crystallinity_effect(
         cmap='inferno',
         norm=norm_crystal
     )
-    ax_main_crystal.set_xlabel("Density", fontsize=label_fontsize)
+    ax_main_crystal.set_xlabel("Polymer density (MD)", fontsize=label_fontsize)
     ax_main_crystal.set_xlim(0.8, 1.5)
     ax_main_crystal.set_ylim(y_bins[0], y_bins[-1])
     ax_main_crystal.tick_params(axis='both', labelsize=tick_fontsize)
